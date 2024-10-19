@@ -16,14 +16,14 @@ export default function ReadingItem({result}) {
                     </tr>   
                 </thead>
                 <tbody>
-                {
-                result.map((a,i)=>
-                    <tr key={i}>
-                        <td>{i}</td>
-                        <td>일반</td>
-                        <td><Link href="/">{a.title}</Link></td>
-                    </tr>
-                )}
+                    {
+                    result.map((a,i)=>
+                        <tr className='table-list' key={result.length-i}>
+                            <td>{result.length-i}</td>
+                            <td>일반</td>
+                            <td><Link href="/">{a.title}</Link></td>
+                        </tr>
+                    )}
                 </tbody>
             </table>
         </div>

@@ -4,10 +4,10 @@ import ReadingItem from "./ReadingItem";
 export default async function Reading() {
   const db = (await connectDB).db('reading');
   let result = await db.collection('post').find().toArray()
-  console.log(result)
+  result.reverse()
 
     return (
-      <div className="list-bg">
+      <div className="table-bg">
         <ReadingItem result={result}></ReadingItem>
       </div>
     )
