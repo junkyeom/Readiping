@@ -1,11 +1,42 @@
-.editor {
-    display: flex;
-    justify-content: center;
-
+.write-page {
+    margin: 20px;
+    margin-left: 50px;
 }
+h5{
+    margin: 0;
+}
+
+.write-header {
+    display: flex;
+    margin: 30px 0 30px 0;
+}
+.ctg-title {
+    margin-bottom: 0.25em;
+}
+#category {
+    background: none;
+    height: 35px;
+    padding: 10px;
+    padding-right: 30px;
+    margin: 0.25em, 0;
+    margin-right: 10px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+
+input[type="text"] {
+    background: none;
+    height: 14.2px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    
+}
+
 
 .quill {
     width: 800px;
+    height: 500px;
 }
 .ql-editor {
     background: white;
