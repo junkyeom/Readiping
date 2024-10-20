@@ -41,3 +41,11 @@ th, td {
     text-align: center;
 }
 .table-list:hover {background-color: lightgray;}
+
+.detail-page {
+    margin: 20px;
+}
+
+
+/** Write 페이지 */
+

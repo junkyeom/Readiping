@@ -1,0 +1,12 @@
+.editor {
+    display: flex;
+    justify-content: center;
+
+}
+
+.quill {
+    width: 800px;
+}
+.ql-editor {
+    background: white;
+}

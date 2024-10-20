@@ -3,6 +3,7 @@
 import Link from "next/link"
 
 export default function ReadingItem({result}) {    
+    let keys = JSON.parse(result).length
 
     return (
         <div>
@@ -17,11 +18,11 @@ export default function ReadingItem({result}) {
                 </thead>
                 <tbody>
                     {
-                    result.map((a,i)=>
-                        <tr className='table-list' key={result.length-i}>
-                            <td>{result.length-i}</td>
-                            <td>일반</td>
-                            <td><Link href="/">{a.title}</Link></td>
+                    JSON.parse(result).map((a,i)=>
+                        <tr className='table-list' key={keys-i}>
+                            <td>{keys-i}</td>
+                            <td>{a.type}</td>
+                            <td><Link href={'/detail/'+a._id.toString()}>{a.title}</Link></td>
                         </tr>
                     )}
                 </tbody>

@@ -8,7 +8,7 @@ export default async function Reading() {
 
     return (
       <div className="table-bg">
-        <ReadingItem result={result}></ReadingItem>
+        <ReadingItem result={JSON.stringify(result)}></ReadingItem>
       </div>
     )
   }
