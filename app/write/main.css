@@ -24,7 +24,7 @@ h5{
     border-bottom: 1px solid lightgray;
 }
 
-input[type="text"] {
+#category, input[type="text"] {
     background: none;
     height: 14.2px;
     padding: 10px;
