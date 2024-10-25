@@ -1,50 +1,38 @@
-'use client'
+'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import 'react-quill/dist/quill.snow.css';
-import './main.css'
+import './main.css';
 
+// Quill 컴포넌트를 동적으로 임포트
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
+const modules = {
+  toolbar: [
+    [{ 'font': ['noto-sans-kr', 'nanum-gothic', 'arial'] }],  // 사용할 폰트 목록
+    [{ 'header': [1, 2, false] }],
+    ['bold', 'italic', 'underline'],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+    ['link', 'image'],
+    ['clean']  // 포맷 제거 버튼
+  ]
+};
+
 export default function Editor() {
-  const [content, setContent] = useState('');
+  const [value, setValue] = useState('');
 
-  const modules = {
-    toolbar: [
-      [{ header: '1' }, { header: '2' }],
-      [{ list: 'ordered' }, { list: 'bullet' }],
-      ['bold', 'italic', 'underline'],
-      [{ color: [] }, { background: [] }],
-      ['link', 'image'],
-      [{ align: [] }],
-      ['clean'],
-    ],
-  };
+  // 클라이언트에서 Quill 설정
+  useEffect(() => {
+    const Quill = require('quill');
+    const Font = Quill.import('formats/font');
+    Font.whitelist = ['noto-sans-kr', 'nanum-gothic', 'arial'];
+    Quill.register(Font, true);
+  }, []);
 
-  // Formats allowed in the editor
-  const formats = [
-    'header',
-    'size',
-    'bold',
-    'italic',
-    'underline',
-    'list',
-    'bullet',
-    'link',
-    'image',
-    'color',
-    'background',
-    'align',
-  ];
-
-  const handleChange = (value) => {
-    setContent(value);
-  };
-
-    return (
-      <div className='editor'>
-        <ReactQuill value={content} modules={modules} formats={formats} onChange={handleChange} />
-      </div>
-    )
-  }
+  return (
+    <div className='editor'>
+      <ReactQuill theme="snow" value={value} modules={modules} onChange={setValue} />
+    </div>
+  );
+}
