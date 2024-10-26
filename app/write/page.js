@@ -1,7 +1,10 @@
 'use client'
+
+import { useState } from 'react';
 import Editor from './editor';
 
 export default function Write() {
+  let [val, setVal]  = useState('')
 
     return (
       <div className='write-page'>
@@ -18,10 +21,16 @@ export default function Write() {
           </div>
           <div className='title-container'>
             <h5>제목</h5>
-            <input type='text' placeholder='제목을 입력해 주세요'></input>
+            <input type='text' value={val} onChange={(e)=>{
+              setVal(e.target.value)
+              console.log(val)
+            }} placeholder='제목을 입력해 주세요'></input>
           </div>
         </div>
         <Editor/>
+        <button id='write-button' onClick={()=>{
+          fetch('/api/write',{method : 'POST', body : JSON.stringify(input)})
+        }}>작성</button>
       </div>
     )
   }
