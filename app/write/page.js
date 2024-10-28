@@ -9,6 +9,11 @@ export default function Write() {
 
   let handleText = (a) => {setTextVal(a)}
 
+  useEffect(()=>{
+    console.log(textVal)
+  },[textVal])
+
+
     return (
       <div className='write-page'>
         <h5>글 작성</h5>
@@ -26,13 +31,15 @@ export default function Write() {
             <h5>제목</h5>
             <input type='text' value={val} onChange={(e)=>{
               setVal(e.target.value)
-              console.log(val)
             }} placeholder='제목을 입력해 주세요'></input>
           </div>
         </div>
         <Editor sendText={handleText}/>
         <button id='write-button' onClick={()=>{
-          fetch('/api/write',{method : 'POST', body : JSON.stringify(val, textVal)})
+          fetch('/api/write',{
+            method : 'POST', 
+            headers: { 'Content-Type': 'application/json' },
+            body : JSON.stringify({title : val, text : textVal})});
         }}>작성</button>
       </div>
     )

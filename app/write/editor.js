@@ -21,8 +21,6 @@ export default function Editor({sendText}) {
   },[value, sendText])
   
 
-  console.log(value)
-
   return (
     <div className='editor'>
       <ReactQuill value={value} onChange={handleChange} />
