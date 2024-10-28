@@ -9,9 +9,6 @@ export default function Write() {
 
   let handleText = (a) => {setTextVal(a)}
 
-  useEffect(()=>{
-    console.log(textVal)
-  },[textVal])
 
 
     return (
@@ -38,8 +35,9 @@ export default function Write() {
         <button id='write-button' onClick={()=>{
           fetch('/api/write',{
             method : 'POST', 
-            headers: { 'Content-Type': 'application/json' },
             body : JSON.stringify({title : val, text : textVal})});
+          console.log(val)
+          console.log(textVal)
         }}>작성</button>
       </div>
     )
