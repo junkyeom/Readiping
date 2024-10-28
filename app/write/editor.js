@@ -9,12 +9,19 @@ import './main.css';
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 
-export default function Editor() {
+export default function Editor({sendText}) {
   const [value, setValue] = useState('');
 
-const handleChange = (value) => {
-    setValue(value);
+  const handleChange = (value) => {
+      setValue(value);
   };
+
+  useEffect(()=>{
+    sendText(value)
+  },[value, sendText])
+  
+
+  console.log(value)
 
   return (
     <div className='editor'>

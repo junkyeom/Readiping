@@ -5,6 +5,9 @@ import Editor from './editor';
 
 export default function Write() {
   let [val, setVal]  = useState('')
+  const [textVal, setTextVal] = useState('');
+
+  let handleText = (a) => {setTextVal(a)}
 
     return (
       <div className='write-page'>
@@ -27,9 +30,9 @@ export default function Write() {
             }} placeholder='제목을 입력해 주세요'></input>
           </div>
         </div>
-        <Editor/>
+        <Editor sendText={handleText}/>
         <button id='write-button' onClick={()=>{
-          fetch('/api/write',{method : 'POST', body : JSON.stringify(input)})
+          fetch('/api/write',{method : 'POST', body : JSON.stringify(val, textVal)})
         }}>작성</button>
       </div>
     )
