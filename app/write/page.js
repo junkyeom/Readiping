@@ -36,8 +36,6 @@ export default function Write() {
           fetch('/api/write',{
             method : 'POST', 
             body : JSON.stringify({title : val, content : textVal})});
-          console.log(val)
-          console.log(textVal)
         }}>작성</button>
       </div>
     )
