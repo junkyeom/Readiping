@@ -7,6 +7,9 @@ a {
     text-decoration: none;
     color : black
 }
+h1, p{
+    margin: 0;
+}
 
 .navbar {
     background: white;
@@ -46,16 +49,33 @@ th, td {
     margin: 20px;
 }
 
-#list-write-button {
-    padding: 5px 10px;
-    margin: 20px 50px;
-    border: none;
-    background: #535353;
-    color: lightgray;
-}
+
 
 
 /** Write 페이지 */
 
+/** list 페이지 */
 
+/** detail 페이지*/
 
+.write-button {
+    padding: 5px 10px;
+    margin: 20px;
+    border: none;
+    background: #535353;
+    color: lightgray;
+}
+.detail-page {
+    padding: 10px;
+    padding-left: 50px;
+}
+#detail-type {
+    font-size: 15px;
+    color: gray;
+}
+#detail-header {
+    border-bottom: 1px solid lightgray ;
+}
+#detail-content {
+    padding-top: 50px;
+}
