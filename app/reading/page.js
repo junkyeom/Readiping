@@ -8,7 +8,7 @@ export default async function Reading() {
   result.reverse()
 
     return (
-      <div>
+      <div id='list-page'>
         <div className="table-bg">
           <ReadingItem result={JSON.stringify(result)}></ReadingItem>
         </div>

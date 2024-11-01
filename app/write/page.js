@@ -15,7 +15,7 @@ export default function Write() {
 
 
     return (
-      <div className='write-page'>
+      <div id='write-page'>
         <h5>글 작성</h5>
         <div className='write-header'>
           <div className='ctg-container'>

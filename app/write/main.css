@@ -1,5 +1,5 @@
 
-.write-page {
+#write-page {
     margin: 20px;
     margin-left: 50px;
 }
@@ -45,9 +45,9 @@ input[type="text"] {
 } 
 
 #write-button {
-  padding: 5px 10px;
-  margin: 20px 0;
-  border: none;
-  background: #535353;
-  color: lightgray;
-}
+    padding: 5px 10px;
+    margin: 20px 0;
+    border: none;
+    background: #535353;
+    color: lightgray;
+  }
