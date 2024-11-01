@@ -2,10 +2,13 @@
 
 import { useState } from 'react';
 import Editor from './editor';
+import { useRouter } from 'next/navigation';
 
 export default function Write() {
+  let router = useRouter()
   let [val, setVal]  = useState('')
-  const [textVal, setTextVal] = useState('');
+  let [textVal, setTextVal] = useState('');
+  let [type, setType] = useState('')
 
   let handleText = (a) => {setTextVal(a)}
 
@@ -17,11 +20,14 @@ export default function Write() {
         <div className='write-header'>
           <div className='ctg-container'>
             <h5 className='ctg-title'>카테고리</h5>
-            <select id='category'>
+            <select id='category' onChange={(e)=>{
+              setType(e.target.value)
+              console.log(e.target.value)
+              }}>
               <option value='null'>분류없음</option>
-              <option value='nomal'>일반</option>
-              <option value='review'>후기</option>
-              <option value='ad'>AD</option>
+              <option value='일반'>일반</option>
+              <option value='후기'>후기</option>
+              <option value='AD'>AD</option>
             </select>
           </div>
           <div className='title-container'>
@@ -35,7 +41,12 @@ export default function Write() {
         <button id='write-button' onClick={()=>{
           fetch('/api/write',{
             method : 'POST', 
-            body : JSON.stringify({title : val, content : textVal})});
+            body : JSON.stringify({title : val, content : textVal, type : type})})
+            .then((r)=>{
+              if(r.status == 200) {
+                router.push('/reading')
+              }})
+            
         }}>작성</button>
       </div>
     )

@@ -1,8 +1,11 @@
 'use client'
 
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export default function ReadingItem({result}) {    
+    let router = useRouter()
+    router.refresh()
     let keys = JSON.parse(result).length
 
     return (
