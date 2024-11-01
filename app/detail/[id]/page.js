@@ -1,5 +1,6 @@
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
+import CleanedResult from "./cleaned"
 
 export default async function Detail(props){
     const db = (await connectDB).db("reading")
@@ -10,9 +11,8 @@ export default async function Detail(props){
             <div className="detail-box">
                 <h4>상세페이지</h4>
                 <h4>{result.title}</h4>
-                <p>{result.content}</p>
+                <CleanedResult content={result.content}/>
             </div>
-            {/* <div className="comment-box"><Comment id={props.params.id}/></div> */}
         </div>
     )
 }

@@ -4,11 +4,15 @@ export default async function handler(req, res) {
         const db = (await connectDB).db("reading")
 
         if (req.method === 'POST') {
-                if (req.body.title == '' || req.body.content == '') {
-                        return res.status(500).json('빈칸 없이 쓰세요')
-                    }
-                try{
-                        const data = JSON.parse(req.body)
+                const data = JSON.parse(req.body)
+                if(data.type == '') {
+                        return res.status(500).json('분류빔')
+                } else if (data.title == '') {
+                        return res.status(500).json('제목빔')
+                } else if(data.content.replace(/<[^>]+>/g, '') == '') {
+                        return res.status(500).json('본문빔')
+                }
+                try{ 
                         await db.collection('post').insertOne(data)
                         console.log(data.title)
                         console.log(data.content)

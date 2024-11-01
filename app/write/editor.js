@@ -6,7 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 import './main.css';
 
 // Quill 컴포넌트를 동적으로 임포트
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false, loading: () => <p>로딩중...</p>});
 
 
 export default function Editor({sendText}) {

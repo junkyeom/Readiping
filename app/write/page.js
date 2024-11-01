@@ -42,11 +42,22 @@ export default function Write() {
           fetch('/api/write',{
             method : 'POST', 
             body : JSON.stringify({title : val, content : textVal, type : type})})
+            .then((r)=>r.json())
             .then((r)=>{
-              if(r.status == 200) {
-                router.push('/reading')
-              }})
-            
+              switch (r) {
+                case '성공':
+                  router.push('/reading')
+                  break
+                case '분류빔':
+                  alert('카테고리를 선택해 주세요')
+                  break
+                case '제목빔':
+                  alert('제목을 작성해 주세요')
+                  break
+                case '본문빔':
+                  alert('본문을 작성해 주세요')
+                  break
+              }})   
         }}>작성</button>
       </div>
     )

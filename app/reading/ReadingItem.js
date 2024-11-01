@@ -2,11 +2,15 @@
 
 import Link from "next/link"
 import { useRouter } from "next/navigation"
+import { useEffect } from "react"
 
 export default function ReadingItem({result}) {    
     let router = useRouter()
-    router.refresh()
     let keys = JSON.parse(result).length
+
+    useEffect(()=>{
+        router.refresh();
+    },[result])
 
     return (
         <div>
