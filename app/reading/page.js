@@ -12,7 +12,7 @@ export default async function Reading() {
         <div className="table-bg">
           <ReadingItem result={JSON.stringify(result)}></ReadingItem>
         </div>
-        <Link href='/write'><button id='write-button'>작성</button></Link>
+        <Link href='/write'><button id='list-write-button'>작성</button></Link>
       </div>
    )
 }

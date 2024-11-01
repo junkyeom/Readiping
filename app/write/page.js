@@ -26,7 +26,8 @@ export default function Write() {
               }}>
               <option value='null'>분류없음</option>
               <option value='일반'>일반</option>
-              <option value='후기'>후기</option>
+              <option value='후기'>인증/후기</option>
+              <option value='후기'>창작</option>
               <option value='AD'>AD</option>
             </select>
           </div>
@@ -38,7 +39,7 @@ export default function Write() {
           </div>
         </div>
         <Editor sendText={handleText}/>
-        <button id='write-button' onClick={()=>{
+        <button className='write-button' onClick={()=>{
           fetch('/api/write',{
             method : 'POST', 
             body : JSON.stringify({title : val, content : textVal, type : type})})

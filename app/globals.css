@@ -46,6 +46,14 @@ th, td {
     margin: 20px;
 }
 
+#list-write-button {
+    padding: 5px 10px;
+    margin: 20px 50px;
+    border: none;
+    background: #535353;
+    color: lightgray;
+}
+
 
 /** Write 페이지 */
 
