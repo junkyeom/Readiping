@@ -31,6 +31,13 @@ h1, p{
     margin-left: auto;
 }
 
+/* sign */
+.sign-btn {
+    margin-left: 20px;
+}
+
+/** list 페이지 */
+
 .table-bg {
     margin: 20px;
 }
@@ -54,7 +61,6 @@ th, td {
 
 /** Write 페이지 */
 
-/** list 페이지 */
 
 /** detail 페이지*/
 

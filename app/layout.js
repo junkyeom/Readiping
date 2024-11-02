@@ -1,12 +1,20 @@
 import "./globals.css";
 import Link from 'next/link';
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import LoginBtn from "./LoginBtn";
+import LogoutBtn from "./LogoutBtn";
+
 
 export const metadata = {
   title: "READIPING",
   description: "책친놈 커뮤니티",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+
+  let session = await getServerSession(authOptions)
+
   return (
     <html lang="en">
       <body>
@@ -21,9 +29,9 @@ export default function RootLayout({ children }) {
               <Link href="/review">서평</Link>         
             </div>
             <div className="nav-right">
-              <span style={{marginRight:'10px'}}>
-                로그인
-              </span>
+              {
+                session ? <span>👤 {session.user.name} <span style={{marginLeft : '10px'}}><LogoutBtn/></span></span>  : <LoginBtn/>
+              }
             </div>
         </div>
         {children}
