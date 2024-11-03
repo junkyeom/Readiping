@@ -8,7 +8,7 @@ import LogoutBtn from "./LogoutBtn";
 
 export const metadata = {
   title: "READIPING",
-  description: "책친놈 커뮤니티",
+  description: "독서 커뮤니티",
 };
 
 export default async function RootLayout({ children }) {

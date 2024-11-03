@@ -33,7 +33,7 @@ h1, p{
 
 /* sign */
 .sign-btn {
-    margin-left: 20px;
+    cursor: pointer;
 }
 
 /** list 페이지 */
