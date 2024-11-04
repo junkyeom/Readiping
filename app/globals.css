@@ -46,6 +46,12 @@ h1, p{
     cursor: pointer;
 }
 
-
-
+/* 작성버튼 */
+.write-btn {
+    margin: 10px 20px;
+    padding: 5px 10px;
+    border: none;
+    background: #757575;
+    color: lightgray;
+}
 

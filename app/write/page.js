@@ -39,7 +39,7 @@ export default function Write() {
           </div>
         </div>
         <Editor sendText={handleText}/>
-        <button className='write-button' onClick={()=>{
+        <button className='write-btn' onClick={()=>{
           fetch('/api/write',{
             method : 'POST', 
             body : JSON.stringify({title : val, content : textVal, type : type})})

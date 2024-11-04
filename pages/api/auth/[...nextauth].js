@@ -8,18 +8,14 @@ import bcrypt from 'bcrypt';
 
 export const authOptions = {
   providers: [
-    GithubProvider({
-      clientId: 'Ov23liYGG6YIG5ZJNR6t',
-      clientSecret: '3ecd059900206bb40d5eb3d4e9b1c3c9cd26bf6b',
-    }),
-
     CredentialsProvider({
       //1. 로그인페이지 폼 자동생성해주는 코드 
       name: "credentials",
         credentials: {
-          email: { label: "email", type: "text" },
-          password: { label: "password", type: "password" },
+          email: { label: "이메일", type: "text" },
+          password: { label: "패스워드", type: "password" },
       },
+    
 
       //2. 로그인요청시 실행되는코드
       //직접 DB에서 아이디,비번 비교하고 
@@ -28,17 +24,23 @@ export const authOptions = {
         let db = (await connectDB).db('reading');
         let user = await db.collection('user_cred').findOne({email : credentials.email})
         if (!user) {
-          console.log('해당 이메일은 없음');
+          console.log('존재하지 않는 이메일입니다.')
           return null
         }
         const pwcheck = await bcrypt.compare(credentials.password, user.password);
         if (!pwcheck) {
-          console.log('비번틀림');
+          console.log('잘못된 패스워드입니다.');
           return null
         }
         return user
       }
+    }),
+    
+    GithubProvider({
+      clientId: 'Ov23liYGG6YIG5ZJNR6t',
+      clientSecret: '3ecd059900206bb40d5eb3d4e9b1c3c9cd26bf6b',
     })
+
   ],
 
   //3. jwt 써놔야 잘됩니다 + jwt 만료일설정
