@@ -1,0 +1,23 @@
+.write-button {
+    padding: 5px 10px;
+    margin: 20px;
+    border: none;
+    background: #535353;
+    color: lightgray;
+}
+.detail-page {
+    padding: 10px;
+    padding-left: 50px;
+     margin: 20px;
+
+}
+#detail-type {
+    font-size: 15px;
+    color: gray;
+}
+#detail-header {
+    border-bottom: 1px solid lightgray ;
+}
+#detail-content {
+    padding-top: 50px;
+}

@@ -1,6 +1,7 @@
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
 import CleanedResult from "./cleaned"
+import './main.css'
 
 export default async function Detail(props){
     const db = (await connectDB).db("reading")

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
+import './main.css'
 
 export default function ReadingItem({result}) {    
     let router = useRouter()

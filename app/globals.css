@@ -11,6 +11,8 @@ h1, p{
     margin: 0;
 }
 
+/* layout 설정 */
+
 .navbar {
     background: white;
     padding: 20px;  
@@ -32,56 +34,18 @@ h1, p{
 }
 
 /* sign */
+
+.sign-input {
+    box-sizing: border-box;
+    padding: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
 .sign-btn {
     cursor: pointer;
 }
 
-/** list 페이지 */
-
-.table-bg {
-    margin: 20px;
-}
-table {
-    border-collapse: collapse;
-    width: 80%;
-}
-th, td {
-    padding: 10px;
-    border-bottom: 0.5px solid black;
-    text-align: center;
-}
-.table-list:hover {background-color: lightgray;}
-
-.detail-page {
-    margin: 20px;
-}
 
 
 
-
-/** Write 페이지 */
-
-
-/** detail 페이지*/
-
-.write-button {
-    padding: 5px 10px;
-    margin: 20px;
-    border: none;
-    background: #535353;
-    color: lightgray;
-}
-.detail-page {
-    padding: 10px;
-    padding-left: 50px;
-}
-#detail-type {
-    font-size: 15px;
-    color: gray;
-}
-#detail-header {
-    border-bottom: 1px solid lightgray ;
-}
-#detail-content {
-    padding-top: 50px;
-}

@@ -1,0 +1,13 @@
+.table-bg {
+    margin: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+th, td {
+    padding: 10px;
+    border-bottom: 0.5px solid black;
+    text-align: center;
+}
+.table-list:hover {background-color: lightgray;}

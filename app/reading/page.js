@@ -1,6 +1,7 @@
 import { connectDB } from "@/util/database";
 import ReadingItem from "./ReadingItem";
 import Link from "next/link";
+import './main.css'
 
 export default async function Reading() {
   const db = (await connectDB).db('reading');
