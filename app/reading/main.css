@@ -9,5 +9,12 @@ th, td {
     padding: 10px;
     border-bottom: 0.5px solid black;
     text-align: center;
+    font-size: 14px;
 }
+
+
+.td-title {
+
+}
+
 .table-list:hover {background-color: lightgray;}
