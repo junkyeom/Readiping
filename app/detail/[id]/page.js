@@ -2,10 +2,15 @@ import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
 import CleanedResult from "./cleaned"
 import './main.css'
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/pages/api/auth/[...nextauth]"
 
 export default async function Detail(props){
     const db = (await connectDB).db("reading")
     let result = await db.collection('post').findOne({ _id : new ObjectId(props.params.id)})
+
+    let session = await getServerSession(authOptions)
+    console.log(session)
 
     return (
         <div className="detail-page">

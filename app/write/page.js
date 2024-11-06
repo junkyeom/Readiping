@@ -58,6 +58,9 @@ export default function Write() {
                 case '본문빔':
                   alert('본문을 작성해 주세요')
                   break
+                case '세션없음':
+                  alert('로그인해주세요')
+                  break
               }})   
         }}>작성</button>
       </div>

@@ -22,6 +22,8 @@ export default function ReadingItem({result}) {
                         <th>번호</th>
                         <th>카테고리</th>
                         <th>제목</th>
+                        <th>글쓴이</th>
+                        <th>날짜</th>
                     </tr>   
                 </thead>
                 <tbody>
@@ -31,6 +33,8 @@ export default function ReadingItem({result}) {
                             <td>{keys-i}</td>
                             <td>{a.type}</td>
                             <td><Link href={'/detail/'+a._id.toString()}>{a.title}</Link></td>
+                            <td>{a.name}</td>
+                            <td>{a.time}</td>
                         </tr>
                     )}
                 </tbody>
