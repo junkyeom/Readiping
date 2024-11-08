@@ -1,6 +1,7 @@
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
 import CleanedResult from "./cleaned"
+import Comment from "./comment"
 import './main.css'
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/pages/api/auth/[...nextauth]"
@@ -10,7 +11,6 @@ export default async function Detail(props){
     let result = await db.collection('post').findOne({ _id : new ObjectId(props.params.id)})
 
     let session = await getServerSession(authOptions)
-    console.log(session)
 
     return (
         <div className="detail-page">
@@ -21,6 +21,9 @@ export default async function Detail(props){
                 </div>
                 <div id='detail-content'>
                     <CleanedResult content={result.content}/>
+                </div>
+                <div className="comment-box">
+                    <Comment id={props.params.id}/>
                 </div>
             </div>
         </div>
