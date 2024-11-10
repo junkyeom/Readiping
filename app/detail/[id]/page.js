@@ -17,7 +17,7 @@ export default async function Detail(props){
             <div className="detail-box">
                 <div id='detail-header'>
                     <p id='detail-type'>{result.type}</p>
-                    <h1 id='detail-title'>{result.title}</h1>
+                    <h2 id='detail-title'>{result.title}</h2>
                 </div>
                 <div id='detail-content'>
                     <CleanedResult content={result.content}/>

@@ -23,6 +23,7 @@ export default function Comment(props) {
                     }) : <p>댓글없음</p>
                 }
             </div>
+          <h5>댓글 달기</h5>
           <input onChange={(e)=>{ setComment(e.target.value)}}/>
           <button onClick={()=>{
             fetch('/api/comment', {method : 'POST', body : JSON.stringify({'comment' : comment, 'id' : props.id})});

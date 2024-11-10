@@ -8,8 +8,10 @@
 .detail-page {
     padding: 10px;
     padding-left: 50px;
-     margin: 20px;
-
+    margin: 20px;
+}
+.detail-box {
+    width: 70%;
 }
 #detail-type {
     font-size: 15px;
@@ -20,4 +22,5 @@
 }
 #detail-content {
     padding-top: 50px;
+    margin-bottom: 50px;
 }
