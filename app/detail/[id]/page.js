@@ -29,3 +29,4 @@ export default async function Detail(props){
         </div>
     )
 }
+
