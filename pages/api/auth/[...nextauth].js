@@ -12,7 +12,7 @@ export const authOptions = {
       //1. 로그인페이지 폼 자동생성해주는 코드 
       name: "credentials",
         credentials: {
-          email: { label: "이메일", type: "text" },
+          id: { label: "아이디", type: "text" },
           password: { label: "패스워드", type: "password" },
       },
     
@@ -22,7 +22,7 @@ export const authOptions = {
       //아이디,비번 맞으면 return 결과, 틀리면 return null 해야함
       async authorize(credentials) {
         let db = (await connectDB).db('reading');
-        let user = await db.collection('user_cred').findOne({email : credentials.email})
+        let user = await db.collection('user_cred').findOne({id : credentials.id})
         if (!user) {
           console.log('존재하지 않는 이메일입니다.')
           return null
@@ -57,7 +57,7 @@ export const authOptions = {
       if (user) {
         token.user = {};
         token.user.name = user.name
-        token.user.email = user.email
+        token.user.id = user.id
       }
       return token;
     },

@@ -1,7 +1,7 @@
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
 import CleanedResult from "./cleaned"
-import Comment from "./comment"
+import Comment from "./Comment"
 import './main.css'
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/pages/api/auth/[...nextauth]"

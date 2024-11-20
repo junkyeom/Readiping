@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     let body = {
       content : req.body.comment,
       parent : new ObjectId(req.body.id),
-      author : session.user.email,
+      author : session.user.id,
       name : session.user.name
     }
 

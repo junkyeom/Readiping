@@ -8,7 +8,7 @@ export default async function handler(req, res) {
         const data = JSON.parse(req.body)
 
         if(session) {
-                data.author = session.user.email;
+                data.author = session.user.id;
                 data.name = session.user.name;
         } else {
                 return res.status(500).json('세션없음')

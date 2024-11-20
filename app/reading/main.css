@@ -14,7 +14,7 @@ th, td {
 
 
 .td-title {
-
+    text-align: justify;
 }
 
 .table-list:hover {background-color: lightgray;}
