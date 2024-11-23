@@ -5,7 +5,7 @@ import bcrypt from 'bcrypt';
 export default async function handler(req, res) {
     if(req.method === 'POST') {
 
-        // 아이디 대신 이메일 로그인 시 
+        // 아이디 대신 이메일 회원가입 시 
 
         // const legEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i
         

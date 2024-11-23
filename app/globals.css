@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     height: 1000px;
@@ -13,7 +20,6 @@ h1, p{
 
 /* layout 설정 */
 
-
 .navbar {
     background: white;
     padding: 20px;  
@@ -24,6 +30,7 @@ h1, p{
     position: relative;
 }
 .logo{
+    font-family: 'PyeongChangPeace-Bold';
     font-size: 25px;
     padding-right: 10px;
 }
