@@ -16,7 +16,7 @@ export default function ReadingItem({result}) {
     return (
         <div>
             <h4>독서포럼</h4>
-            <table className="table">
+            <table className="reading-table">
                 <thead>
                     <tr>
                         <th width='8%'>번호</th>

@@ -1,12 +1,8 @@
-import styles from "./globals.css";
-import { connectDB } from "@/util/database";
+import "./globals.css";
+import IndividualIntervalsExample from "./home/carousel";
 
-export default async function Home() {
+export default function Home() {
 
 
-  return (
-    <div className='home'>
-      
-    </div>
-  );
+  return <IndividualIntervalsExample/>
 }

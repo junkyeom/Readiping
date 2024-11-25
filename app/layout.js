@@ -18,7 +18,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="navbar">
+        <div className="nvb">
             <div className="nav-left">
             <Link href='/' className="logo">READIPING</Link>
             </div>
