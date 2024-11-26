@@ -16,7 +16,7 @@ export default function Write() {
 
     return (
       <div id='write-page'>
-        <h5>글 작성</h5>
+        <h4>글 작성</h4>
         <div className='write-header'>
           <div className='ctg-container'>
             <h5 className='ctg-title'>카테고리</h5>
@@ -39,7 +39,7 @@ export default function Write() {
           </div>
         </div>
         <Editor sendText={handleText}/>
-        <button className='write-btn' onClick={()=>{
+        <button className='write-btn' style={{marginLeft: '0'}} onClick={()=>{
           fetch('/api/write',{
             method : 'POST', 
             body : JSON.stringify({title : val, content : textVal, type : type})})

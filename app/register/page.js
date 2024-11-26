@@ -21,7 +21,7 @@ export default function Register() {
                   </td>
                 </tr>
                 <tr>
-                  <th className='reg-tb'>패스워드</th>
+                  <th className='reg-th'>패스워드</th>
                   <td className='reg-td'>
                     <input name="password" type="password"/>
                     <p className='reg-warning'>8 ~ 16자 영문, 숫자, 특수문자를<br></br> 최소 한가지씩 조합</p>
