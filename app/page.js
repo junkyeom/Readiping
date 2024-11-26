@@ -4,5 +4,15 @@ import IndividualIntervalsExample from "./home/carousel";
 export default function Home() {
 
 
-  return <IndividualIntervalsExample/>
+  return (
+  <div>
+    <div id='wrapper'>
+      <IndividualIntervalsExample/>
+    </div>
+    <div style={{height:'500px'}}></div>
+    <footer>
+      JPAK
+    </footer>
+  </div>
+  )
 }

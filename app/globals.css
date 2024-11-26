@@ -7,7 +7,7 @@
 
 body {
     margin: 0 !important;
-    height: 1000px !important;
+    height: 100% !important;
     background: whitesmoke !important;
 }
 a {
@@ -54,6 +54,7 @@ h6 {
     margin: 2.33em 0 !important;
 }
 
+
 /* layout 설정 */
 
 .nvb {
@@ -75,6 +76,24 @@ h6 {
 }
 .nav-right {
     margin-left: auto;
+}
+
+
+/* homepage 설정 */
+
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 화면 전체 높이를 사용 */
+}
+
+footer {
+    margin-top: auto; /* 푸터를 하단으로 밀어냄 */
+    background-color: #1c1c1c; /* 예시 배경 색 */
+    color: white;
+    text-align: center;
+    padding: 3.5rem 0;
 }
 
 /* sign */
