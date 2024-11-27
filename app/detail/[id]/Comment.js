@@ -15,6 +15,7 @@ export default function Comment(props) {
 
     return (
         <div className="comment">
+          <h4>💬 댓글 {list.length}</h4>
           <h5>댓글목록</h5>
           <div>
                 {

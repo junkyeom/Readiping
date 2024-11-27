@@ -7,14 +7,17 @@
 }
 th, td {
     padding: 10px;
-    border-bottom: 0.5px solid black;
-    text-align: center;
-    font-size: 14px;
+    border-bottom: 0.5px solid black !important;
+    text-align: center !important;
+    font-size: 14px !important;
 }
 
 
 .td-title {
-    text-align: justify;
+    text-align: justify !important;
 }
 
-.table-list:hover {background-color: lightgray;}
+.table-list:hover {
+    background-color: rgb(230, 230, 230);
+    transition: 200ms;
+}

@@ -4,12 +4,6 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import LoginBtn from "./LoginBtn";
 import LogoutBtn from "./LogoutBtn";
-  
-
-export const metadata = {
-  title: "READIPING",
-  description: "독서 커뮤니티",
-};
 
 export default async function RootLayout({ children }) {
 
@@ -17,6 +11,11 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <title>READPING</title>
+        <meta name='description' content='독서 커뮤니티'/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chat" />
+      </head>
       <body>
         <div className="nvb">
             <div className="nav-left">

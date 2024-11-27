@@ -17,10 +17,21 @@
     font-size: 15px;
     color: gray;
 }
-#detail-header {
-    border-bottom: 1px solid lightgray ;
+
+#detail-header, #detail-content {
+    border-bottom: 0.5px solid lightgray ;
 }
+
 #detail-content {
-    padding-top: 50px;
-    margin-bottom: 50px;
+    padding: 50px 0;
+    min-height: 100px;
+}
+
+#detail-tool {
+    padding: 20px 0;
+}
+
+.tool-btn {
+    padding: 0 5px;
+    font-size: 14px;
 }

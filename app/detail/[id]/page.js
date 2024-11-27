@@ -5,12 +5,14 @@ import Comment from "./Comment"
 import './main.css'
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/pages/api/auth/[...nextauth]"
+import Link from "next/link"
 
 export default async function Detail(props){
     const db = (await connectDB).db("reading")
     let result = await db.collection('post').findOne({ _id : new ObjectId(props.params.id)})
 
     let session = await getServerSession(authOptions)
+    console.log(result.author)
 
     return (
         <div className="detail-page">
@@ -21,6 +23,16 @@ export default async function Detail(props){
                 </div>
                 <div id='detail-content'>
                     <CleanedResult content={result.content}/>
+                </div>
+                <div id='detail-tool'>
+                    { session && session.user.id == result.author ? 
+                    <div id='session-tool'>
+                        <Link href='/'><span className="tool-btn">수정</span></Link>
+                        <Link href='/'><span className="tool-btn">삭제</span></Link>
+                    </div> : 
+                    <div>
+                        <Link href='/reading'><span className="tool-btn">목록</span></Link>
+                    </div>}
                 </div>
                 <div className="comment-box">
                     <Comment id={props.params.id}/>
