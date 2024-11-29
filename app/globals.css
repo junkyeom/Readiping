@@ -15,51 +15,42 @@
 body {
     margin: 0 !important;
     height: 100% !important;
-    background: whitesmoke !important;
-    font-family: 'Pretendard-Regular' !important
+    font-family: 'Pretendard-Regular' !important;
+    background-color: white;
 }
 a {
     text-decoration: none !important;
-    color : black !important
-}
-h1, p{
-    margin: 0 !important    ;
+    color : black !important;
 }
 
 h1 {
     font-size: 32px !important; /* 32px(기본값) */
     font-weight: bold !important;
-    margin: 0.67em 0 !important;
 }
 
 h2 {
     font-size: 24px !important; /* 24px(기본값) */
     font-weight: bold !important;
-    margin: 0.83em 0 !important;
 }
 
 h3 {
     font-size: 19px !important; /* 19px(기본값) */
     font-weight: bold !important;
-    margin: 1em 0 !important;
 }
 
 h4 {
     font-size: 16px !important; /* 16px(기본값) */
     font-weight: bold !important;
-    margin: 1.33em 0 !important;
 }
 
 h5 {
     font-size: 13px !important; /* 13px(기본값) */
     font-weight: bold !important;
-    margin: 1.67em 0 !important;
 }
 
 h6 {
     font-size: 12px !important; /* 12px(기본값) */
     font-weight: bold !important;
-    margin: 2.33em 0 !important;
 }
 
 
@@ -73,6 +64,7 @@ h6 {
     width: 100%;
     box-sizing: border-box;
     position: relative;
+    border-bottom: 0.5px solid lightgray;
 }
 .logo{
     font-family: 'PyeongChangPeace-Bold';
@@ -86,6 +78,9 @@ h6 {
     margin-left: auto;
 }
 
+.nav-center {
+    color: #6b6b6b !important;
+}
 
 /* homepage 설정 */
 

@@ -15,7 +15,7 @@ export default function ReadingItem({result}) {
 
     return (
         <div>
-            <h4>독서포럼</h4>
+            <h4 className='forum-title'>독서포럼</h4>
             <table className="reading-table">
                 <thead>
                     <tr>

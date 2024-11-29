@@ -15,18 +15,22 @@ export default function Comment(props) {
 
     return (
         <div className="comment">
-          <h4>💬 댓글 {list.length}</h4>
-          <h5>댓글목록</h5>
-          <div>
+          <div className="comment-header">
+            <h4 style={{margin:'0'}}><span className="material-symbols-outlined">chat</span> 댓글 {list.length}</h4>
+          </div>
+            <div className="comment-list">
                 {
                     list.length > 0 ?
                     list.map((a, i)=>{
-                        return <div key={i}><p>{a.name}   :   {a.content}</p></div>
-                    }) : <p>댓글없음</p>
+                        return (<div key={i} className="comment-item">
+                            <h6 className="comment-name">{a.name}</h6>
+                            <p className='comment-content'>{a.content}</p>
+                          </div>)
+                    }) : null
                 }
             </div>
           <h5>댓글 달기</h5>
-          <input onChange={(e)=>{ setComment(e.target.value)}}/>
+          <textarea className='comment-input' wrap="soft" onChange={(e)=>{ setComment(e.target.value)}}/>
           <button onClick={()=>{
             fetch('/api/comment', {method : 'POST', body : JSON.stringify({'comment' : comment, 'id' : props.id})});
             location.reload();

@@ -1,6 +1,11 @@
 .table-bg {
     margin: 20px;
 }
+
+.forum-title {
+    margin: 0 0 20px 0;
+}
+
 .reading-table {
     border-collapse: collapse;
     width: 80%;
