@@ -12,7 +12,6 @@ export default async function Detail(props){
     let result = await db.collection('post').findOne({ _id : new ObjectId(props.params.id)})
 
     let session = await getServerSession(authOptions)
-    console.log(result.author)
 
     return (
         <div className="detail-page">
@@ -27,7 +26,7 @@ export default async function Detail(props){
                 <div id='detail-tool'>
                     { session && session.user.id == result.author ? 
                     <div id='session-tool'>
-                        <Link href='/'><span className="tool-btn">수정</span></Link>
+                        <Link href={'/edit/' + result._id}><span className="tool-btn">수정</span></Link>
                         <Link href='/'><span className="tool-btn">삭제</span></Link>
                     </div> : 
                     <div>

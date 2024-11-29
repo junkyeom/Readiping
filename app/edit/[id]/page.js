@@ -1,3 +1,4 @@
+import './main.css'
 import { ObjectId } from "mongodb";
 import { connectDB } from "@/util/database.js"
 import Editor from "@/app/write/editor";
@@ -9,8 +10,9 @@ export default async function Edit(props) {
     <div className="p-20">
         <h4>수정 페이지</h4>
         <form action="/api/edit" method="POST">
-            <input type='text' defaultValue={result.title}></input>
-            <Editor sendText={result.content}/>
+            <input type='text' defaultValue={result.title}/>
+            <input name="content" defaultValue={result.content}/>
+            {/* <Editor sendText={result.content}/> */}
             <input className="_id" name="_id" defaultValue={props.params.id}/>
             <button type="submit">전송</button>
         </form>
