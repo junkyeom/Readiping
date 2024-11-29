@@ -15,6 +15,7 @@ export default function IndividualIntervalsExample() {
                     <div className='crsl-item'>
                         <Image
                             src="/images/c-1.jpg"
+                            alt="book"
                             layout="fill"
                             objectFit="cover"
                         />
@@ -30,6 +31,7 @@ export default function IndividualIntervalsExample() {
             <div className='crsl-item'>
                 <Image
                     src="/images/c-2.webp"
+                    alt="wings"
                     layout="fill"
                     objectFit="cover"
                 />
@@ -45,6 +47,7 @@ export default function IndividualIntervalsExample() {
             <div className='crsl-item'>
                 <Image
                     src="/images/c-3.jpg"
+                    alt="Kangmincheol"
                     layout="fill"
                     objectFit="cover"
                 />

@@ -45,6 +45,7 @@ h4, h6, p {
 .tool-btn {
     padding: 0 5px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .comment-header, .comment-item {
