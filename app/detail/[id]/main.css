@@ -20,16 +20,18 @@ h4, h6, p {
     padding: 10px;
     padding-left: 50px;
     margin: 20px;
+    min-height: 100vh;
 }
+
 .detail-box {
     width: 70%;
 }
 #detail-type {
     font-size: 15px;
-    color: gray;
+    color: #ff3399;
 }
 
-#detail-header, #detail-content {
+#detail-header, #detail-like {
     border-bottom: 0.5px solid lightgray ;
 }
 
@@ -81,3 +83,21 @@ h4, h6, p {
     padding: 5px;
     white-space: pre-wrap;
 }
+
+/* like */
+
+
+.like-btn {
+    width: 70px;
+    height: 50px;
+    color: #ff3399;
+    font-size: 15px;
+    background-color: white;
+    border: solid 1px #ff3399;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left: 42.72%;
+    margin-right: 42.72%;
+
+}
+

@@ -16,7 +16,7 @@ export default function Comment(props) {
     return (
         <div className="comment">
           <div className="comment-header">
-            <h4 style={{margin:'0'}}><span className="material-symbols-outlined">chat</span> 댓글 {list.length}</h4>
+            <h4 style={{margin:'0'}}><span className="material-symbols-outlined">chat</span> 댓글 <span style={{color : '#ff7f7f'}}>{list.length}</span></h4>
           </div>
             <div className="comment-list">
                 {

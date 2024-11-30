@@ -11,6 +11,7 @@ export default function Home() {
       <IndividualIntervalsExample/>
     </div>
     <div id='home-banner'>
+      <a href="https://blog.naver.com/hyuna5071/221380780586">
       <Image
         src="/images/banner/home-1.png" 
         alt="description" 
@@ -19,6 +20,7 @@ export default function Home() {
         layout="intrinsic"
         style={{ borderRadius: '10px' }}
      />
+     </a>
     </div>
     <div style={{height:'500px'}}></div>
     <footer>
@@ -27,3 +29,4 @@ export default function Home() {
   </div>
   )
 }
+ ';plkmjnh vbn,l;kjhbvpokjn6'

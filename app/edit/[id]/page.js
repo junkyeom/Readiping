@@ -7,34 +7,34 @@ import { useRouter } from 'next/navigation';
 
 export default function Edit(props) {
 
-  let [def, setDef] = useState('')
+  let router = useRouter()
+  let [val, setVal]  = useState('')
+  let [textVal, setTextVal] = useState('');
+  let [type, setType] = useState('')
 
   useEffect(()=>{
     fetch(`/api/edit/${props.params.id}`)
     .then((r)=>r.json())
     .then((data)=>{
-      setDef(data)
       setVal(data.title || ''); // 제목 초기화
       setTextVal(data.content || ''); // 본문 초기화
       setType(data.type || 'null'); // 카테고리 초기화
     });
   },[props.params.id])
 
-
-  let router = useRouter()
-  let [val, setVal]  = useState(def.title)
-  let [textVal, setTextVal] = useState(def.content);
-  let [type, setType] = useState(def.type)
+  // useEffect(()=>{
+  //   console.log(textVal)
+  // },[textVal])
 
   let handleText = (a) => {setTextVal(a)}
-
+ 
     return (
       <div id='edit-page'>
         <h4>수정 페이지</h4>
         <div className='write-header'>
           <div className='ctg-container'>
             <h5 className='ctg-title'>카테고리</h5>
-            <select id='category' value={val} onChange={(e)=>{
+            <select id='category' value={type} onChange={(e)=>{
               setType(e.target.value)
               }}>
               <option value='null'>분류없음</option>
@@ -48,13 +48,14 @@ export default function Edit(props) {
             <h5>제목</h5>
             <input className='title-input' type='text' value={val} onChange={(e)=>{
               setVal(e.target.value)
-            }} defaultValue={def.title}></input>
+            }}></input>
           </div>
         </div>
-        <Editor sendText={handleText} defText={def.content}/>
+        <Editor sendText={handleText} defText={textVal}/>
         <button className='write-btn' style={{marginLeft: '0'}} onClick={()=>{
           fetch('/api/edit/edit',{
             method : 'POST', 
+            headers: { 'Content-Type': 'application/json' },
             body : JSON.stringify({id : props.params.id ,title : val, content : textVal, type : type})})
             .then((r)=>r.json())
             .then((r)=>{

@@ -24,7 +24,8 @@ export default async function handler(req, res) {
                 }
                 try{
                         let time = new Date().toLocaleDateString()
-                        data.time = time
+                        data.time = time;
+                        data.like = 0;
                         await db.collection('post').insertOne(data)
                         return res.status(200).json('성공')
                 }

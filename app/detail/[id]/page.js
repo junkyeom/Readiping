@@ -7,6 +7,7 @@ import { getServerSession } from "next-auth"
 import { authOptions } from "@/pages/api/auth/[...nextauth]"
 import Link from "next/link"
 import Delete from "./Delete"
+import Like from "./Like"
 
 export default async function Detail(props){
     const db = (await connectDB).db("reading")
@@ -24,10 +25,13 @@ export default async function Detail(props){
                 <div id='detail-content'>
                     <CleanedResult content={result.content}/>
                 </div>
+                <div id='detail-like'>
+                    <Like id={props.params.id} like={result.like}/>
+                </div>
                 <div id='detail-tool'>
                     { session && session.user.id == result.author ? 
                     <div id='session-tool'>
-                        <Link href={'/edit/' + result._id}><span className="tool-btn">수정</span></Link>
+                        {/* <Link href={'/edit/' + result._id}><span className="tool-btn">수정</span></Link> */}
                         <Delete id={result._id.toString()}/>
                     </div> : 
                     <div>
