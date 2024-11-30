@@ -22,7 +22,7 @@ th, td {
     text-align: justify !important;
 }
 
-.table-list:hover {
+.table-item:hover {
     background-color: rgb(230, 230, 230);
-    transition: 200ms;
+    transition: 100ms;
 }

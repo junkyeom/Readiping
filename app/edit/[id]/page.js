@@ -1,21 +1,81 @@
-import './main.css'
-import { ObjectId } from "mongodb";
-import { connectDB } from "@/util/database.js"
-import Editor from "@/app/write/editor";
+'use client'
 
-export default async function Edit(props) {
-  let db = (await connectDB).db('reading')
-  let result = await db.collection('post').findOne({_id : new ObjectId(props.params.id)});
-  return (
-    <div className="p-20">
+import './main.css'
+import { useEffect, useState } from 'react';
+import Editor from './editor';
+import { useRouter } from 'next/navigation';
+
+export default function Edit(props) {
+
+  let [def, setDef] = useState('')
+
+  useEffect(()=>{
+    fetch(`/api/edit/${props.params.id}`)
+    .then((r)=>r.json())
+    .then((data)=>{
+      setDef(data)
+      setVal(data.title || ''); // 제목 초기화
+      setTextVal(data.content || ''); // 본문 초기화
+      setType(data.type || 'null'); // 카테고리 초기화
+    });
+  },[props.params.id])
+
+
+  let router = useRouter()
+  let [val, setVal]  = useState(def.title)
+  let [textVal, setTextVal] = useState(def.content);
+  let [type, setType] = useState(def.type)
+
+  let handleText = (a) => {setTextVal(a)}
+
+    return (
+      <div id='edit-page'>
         <h4>수정 페이지</h4>
-        <form action="/api/edit" method="POST">
-            <input className='title-input' type='text' name='title' defaultValue={result.title}/>
-            <input type='text' name="content" defaultValue={result.content}/>
-            {/* <Editor sendText={result.content}/> */}
-            <input className="_id" name="_id" defaultValue={props.params.id}/>
-            <button type="submit">전송</button>
-        </form>
-    </div>
-  )
-} 
+        <div className='write-header'>
+          <div className='ctg-container'>
+            <h5 className='ctg-title'>카테고리</h5>
+            <select id='category' value={val} onChange={(e)=>{
+              setType(e.target.value)
+              }}>
+              <option value='null'>분류없음</option>
+              <option value='일반'>일반</option>
+              <option value='후기'>인증/후기</option>
+              <option value='후기'>창작</option>
+              <option value='AD'>AD</option>
+            </select>
+          </div>
+          <div className='title-container'>
+            <h5>제목</h5>
+            <input className='title-input' type='text' value={val} onChange={(e)=>{
+              setVal(e.target.value)
+            }} defaultValue={def.title}></input>
+          </div>
+        </div>
+        <Editor sendText={handleText} defText={def.content}/>
+        <button className='write-btn' style={{marginLeft: '0'}} onClick={()=>{
+          fetch('/api/edit/edit',{
+            method : 'POST', 
+            body : JSON.stringify({id : props.params.id ,title : val, content : textVal, type : type})})
+            .then((r)=>r.json())
+            .then((r)=>{
+              switch (r) {
+                case '성공':
+                  router.push('/reading')
+                  break
+                case '분류빔':
+                  alert('카테고리를 선택해 주세요')
+                  break
+                case '제목빔':
+                  alert('제목을 작성해 주세요')
+                  break
+                case '본문빔':
+                  alert('본문을 작성해 주세요')
+                  break
+                case '세션없음':
+                  alert('로그인해주세요')
+                  break
+              }})   
+        }}>작성</button>
+      </div>
+    )
+  }

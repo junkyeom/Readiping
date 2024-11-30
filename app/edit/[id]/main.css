@@ -1,3 +1,54 @@
+#edit-page {
+    margin: 20px;
+    margin-left: 50px;
+}
+h4{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.editor {
+    margin-bottom: 20px;
+}
+
+.write-header {
+    display: flex;
+    margin: 30px 0 30px 0;
+}
+
+#category, .title-input {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    height: 30px;
+    width: 100px;
+    padding: 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.title-input{
+    width: 680px;
+}
+
+#category {
+    margin-right: 20px;
+}
+
+
+.quill {
+    width: 800px;
+}
+.ql-editor {
+    background: white;
+    height: 400px;
+}
+
+.ql-toolbar button:hover {
+  background-color: #e6e6e6; 
+} 
+
+/* 수정 페이지만 css */
+
 ._id {
     display: none;
 }

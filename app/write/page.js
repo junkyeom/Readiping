@@ -12,8 +12,6 @@ export default function Write() {
 
   let handleText = (a) => {setTextVal(a)}
 
-
-
     return (
       <div id='write-page'>
         <h4>글 작성</h4>

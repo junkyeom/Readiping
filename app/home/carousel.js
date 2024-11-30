@@ -10,7 +10,7 @@ export default function IndividualIntervalsExample() {
     return (
       <div>
         <Carousel>    
-            <Carousel.Item interval={1000}>
+            <Carousel.Item interval={5000}>
                 <Link href='/detail/6745b48198ab287bdc50dfa5'>
                     <div className='crsl-item'>
                         <Image
@@ -26,23 +26,23 @@ export default function IndividualIntervalsExample() {
                     </Carousel.Caption>
                 </Link>
             </Carousel.Item>
-            <Carousel.Item interval={500}>
-            <a href='https://www.youtube.com/watch?v=5f1qDvQsMh8'>
+            <Carousel.Item interval={5000}>
+            <a href='https://www.youtube.com/watch?v=9JW8ijjz9sU'>
             <div className='crsl-item'>
                 <Image
-                    src="/images/c-2.webp"
+                    src="/images/c-2.png"
                     alt="wings"
                     layout="fill"
                     objectFit="cover"
                 />
             </div>
             <Carousel.Caption>
-                <p className='crsl-title'>박제가 되어버린 천재를 아시오?</p>
-                <p className='crsl-sub'>이상의 '날개' 모더니즘 해석</p>
+                <p className='crsl-title'>'악의 평범성'에 대한 보고서</p>
+                <p className='crsl-sub'>설민석이 읽어주는 &lt;예루살렘의 아이히만&gt;</p>
             </Carousel.Caption>
             </a>
             </Carousel.Item>
-            <Carousel.Item>
+            <Carousel.Item interval={5000}>
             <a href='https://www.megastudy.net/teacher_v2/chr/lecture_detailview.asp?CHR_CD=53689&MAKE_FLG=&tec_cd=megabori'>
             <div className='crsl-item'>
                 <Image

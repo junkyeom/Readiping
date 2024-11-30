@@ -29,7 +29,7 @@ export default function ReadingItem({result}) {
                 <tbody>
                     {
                     JSON.parse(result).map((a,i)=>
-                        <tr className='table-list' key={keys-i}>
+                        <tr className='table-item' key={keys-i}>
                             <td>{keys-i}</td>
                             <td>{a.type}</td>
                             <td className="td-title"><Link href={'/detail/'+a._id.toString()}>{a.title}</Link></td>
