@@ -6,7 +6,7 @@ import './main.css'
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/pages/api/auth/[...nextauth]"
 import Link from "next/link"
-import Delete from "./delete"
+import Delete from "./Delete"
 
 export default async function Detail(props){
     const db = (await connectDB).db("reading")
