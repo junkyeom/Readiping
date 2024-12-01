@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function IndividualIntervalsExample() {
     return (
-      <div>
+      <div id='crsl-container'>
         <Carousel>    
             <Carousel.Item interval={5000}>
                 <Link href='/detail/6745b48198ab287bdc50dfa5'>

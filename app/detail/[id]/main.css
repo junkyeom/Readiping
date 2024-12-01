@@ -86,6 +86,10 @@ h4, h6, p {
 
 /* like */
 
+#detail-like {
+    display: flex;
+    justify-content: center;
+}
 
 .like-btn {
     width: 70px;
@@ -96,8 +100,5 @@ h4, h6, p {
     border: solid 1px #ff3399;
     border-radius: 10px;
     margin-bottom: 50px;
-    margin-left: 42.72%;
-    margin-right: 42.72%;
-
 }
 

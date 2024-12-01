@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+#crsl-container {
+    padding-bottom: 24px;
+}
+
 .crsl-item {
     position: relative;
     width: 100%;
@@ -50,3 +54,34 @@
     text-align: left;
 }
 
+.title-community {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 50px;
+}
+.title-community>span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1em;
+}
+
+.hot-post {
+    border: solid 1px #eee;
+    border-radius: 10px;
+    padding: 25px;
+    width: 300px;
+    box-sizing: border-box; /* 이거 용도가 뭘까 */
+}
+
+.hotpost-container {
+    box-sizing: inherit;
+}
+
+.hotpost-item {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 13px;
+}
+.ranking {
+    margin-right: 10px;
+}

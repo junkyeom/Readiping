@@ -92,6 +92,18 @@ h6 {
     /* min-height: 100vh;  */
 }
 
+#inner-container {
+    margin: 0 auto;
+}
+
+#community-container {
+    padding-top: 16px;
+}
+
+
+
+
+
 footer {
     margin-top: auto; /* 푸터를 하단으로 밀어냄 */
     background-color: #1c1c1c; /* 예시 배경 색 */
