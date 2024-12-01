@@ -1,6 +1,7 @@
 import "./globals.css";
 import Image from "next/image";
 import IndividualIntervalsExample from "./home/carousel";
+import HotPost from "./home/hotpost";
 
 export default function Home() {
 
@@ -21,6 +22,9 @@ export default function Home() {
         style={{ borderRadius: '10px' }}
      />
      </a>
+    </div>
+    <div className="best-list">
+      <HotPost/>
     </div>
     <div style={{height:'500px'}}></div>
     <footer>

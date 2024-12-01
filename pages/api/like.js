@@ -9,7 +9,6 @@ export default async function handler(req, res) {
 
     if (req.method == 'POST'){
         try{
-            console.log(req.body)
             await db.collection('post').updateOne({_id : new ObjectId(req.body)}, {$inc : {like : 1}})
             return res.status(200).json('성공')
         } catch (error) {
