@@ -59,16 +59,6 @@ h4, h6, p {
     margin-bottom: 40px ;
 }
 
-.material-symbols-outlined {
-    font-size: 1em !important;
-    font-variation-settings: 
-      'FILL' 0,        
-      'wght' 400,       
-      'GRAD' 0,      
-      'opsz' 20;  
-    vertical-align: middle;
-  }
-
 .comment-name {
     padding-bottom: 10px;
 }
