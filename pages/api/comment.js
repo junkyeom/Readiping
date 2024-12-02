@@ -8,16 +8,16 @@ export default async function handler(req, res) {
   let session = await getServerSession(req, res, authOptions)
 
   if (req.method == 'POST'){
-    req.body = JSON.parse(req.body)
+    let data = req.body;
     let body = {
-      content : req.body.comment,
-      parent : new ObjectId(req.body.id),
+      content : data.comment,
+      parent : new ObjectId(data.id),
       author : session.user.id,
       name : session.user.name
     }
 
     await db.collection('comment').insertOne(body)
-    await db.collection('post').updateOne({_id : new ObjectId(req.body)}, {$inc : {commentCnt : 1}})
+    await db.collection('post').updateOne({parent : new ObjectId(data)}, {$inc : {commentCnt : 1}})
     return res.redirect(302, '/list')
     }
 

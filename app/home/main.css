@@ -77,7 +77,8 @@
     box-sizing: inherit;
 }
 .hotpost-title {
-    padding: 5px 0 10px 0;
+    margin: 5px 0 10px 0 !important;
+    font-weight: bold !important;
 }
 .hotpost-item {
     margin: 0;

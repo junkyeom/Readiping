@@ -33,9 +33,8 @@ export default function Home() {
       <div style={{height:'500px'}}></div>
     </div>
     <footer>
-      JPAK
+      Made by JPACMAFIA
     </footer>
   </div>
   )
 }
- ';plkmjnh vbn,l;kjhbvpokjn6'

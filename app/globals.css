@@ -22,6 +22,9 @@ a {
     text-decoration: none !important;
     color : black !important;
 }
+p {
+    margin: 0;
+}
 em{
     font-style: normal; 
     color : #ff3399;
@@ -31,34 +34,34 @@ em{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0; /* 기본 마진을 없애줍니다 */
-    padding: 0; /* 기본 패딩을 없애줍니다 */
-    font-weight: bold; /* 기본적으로 굵은 글씨 */
-    font-family: inherit; /* 부모 요소에서 상속된 폰트 사용 */
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: inherit !important;
+    font-weight: bold !important;
 }
 
 h1 {
-    font-size: 2em; /* h1의 기본 크기 */
+    font-size: 32px !important; /* h1의 기본 크기 */
 }
 
 h2 {
-    font-size: 1.75em; /* h2의 기본 크기 */
+    font-size: 24px !important; /* h2의 기본 크기 */
 }
 
 h3 {
-    font-size: 1.5em; /* h3의 기본 크기 */
+    font-size: 19px !important; /* h3의 기본 크기 */
 }
 
 h4 {
-    font-size: 1.25em; /* h4의 기본 크기 */
+    font-size: 16px!important; /* h4의 기본 크기 */
 }
 
 h5 {
-    font-size: 1.1em; /* h5의 기본 크기 */
+    font-size: 12px !important; /* h5의 기본 크기 */
 }
 
 h6 {
-    font-size: 1em; /* h6의 기본 크기 */
+    font-size: 10px!important; /* h6의 기본 크기 */
 }
 
 .material-symbols-outlined {

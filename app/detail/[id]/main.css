@@ -5,8 +5,8 @@
     font-style: normal;
 }
 
-h2, h4, h6, p {
-    margin:0;
+h5 {
+    margin-bottom: 1em !important;
 }
 
 .write-button {
@@ -22,9 +22,9 @@ h2, h4, h6, p {
     margin: 20px;
     min-height: 100vh;
     font-size: 14px;
+    display: flex;
 }
-
-.detail-box {
+.detail-main {
     width: 70%;
 }
 #detail-type {
@@ -114,3 +114,11 @@ h2, h4, h6, p {
     margin-bottom: 50px;
 }
 
+/* banner */
+
+.detail-banner {
+    width: 300px;
+    height: 915px;
+    position: sticky;
+    background-color: #ff3399;
+}
