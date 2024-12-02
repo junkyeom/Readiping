@@ -6,7 +6,8 @@ export default async function handler(req, res) {
 
     if (req.method == 'GET'){
         try{
-            let result = await db.collection('post').aggregate([{$sort : {like : -1}}]).toArray()
+            let data = await db.collection('post').aggregate([{$sort : {like : -1}}]).toArray()
+            const result = data.slice(0, 10)
             return res.status(200).json(result)
         } catch (error) {   
             return res.status(500).json(error)

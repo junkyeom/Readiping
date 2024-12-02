@@ -29,7 +29,7 @@ export default function Comment(props) {
                     }) : null
                 }
             </div>
-          <h5>댓글 달기</h5>
+          <h5 style={{fontSize : '1em', margin : '1em 0'}}>댓글 달기</h5>
           <textarea className='comment-input' wrap="soft" onChange={(e)=>{ setComment(e.target.value)}}/>
           <button onClick={()=>{
             fetch('/api/comment', {method : 'POST', body : JSON.stringify({'comment' : comment, 'id' : props.id})});

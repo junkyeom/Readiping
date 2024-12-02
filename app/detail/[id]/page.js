@@ -21,6 +21,11 @@ export default async function Detail(props){
                 <div id='detail-header'>
                     <p id='detail-type'>{result.type}</p>
                     <h2 id='detail-title'>{result.title}</h2>
+                    <p id='detail-meta'>
+                        <span>{result.name}</span>
+                        <span>{result.time}</span>
+                        <span>댓글 {result.commentCnt}</span>
+                    </p>
                 </div>
                 <div id='detail-content'>
                     <CleanedResult content={result.content}/>

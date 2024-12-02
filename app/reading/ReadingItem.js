@@ -32,7 +32,7 @@ export default function ReadingItem({result}) {
                         <tr className='table-item' key={keys-i}>
                             <td>{keys-i}</td>
                             <td>{a.type}</td>
-                            <td className="td-title"><Link href={'/detail/'+a._id.toString()}>{a.title}</Link></td>
+                            <td className="td-title"><Link href={'/detail/'+a._id.toString()}>{a.title}<em>[{a.commentCnt}]</em></Link></td>
                             <td>{a.name}</td>
                             <td>{a.time}</td>
                         </tr>
