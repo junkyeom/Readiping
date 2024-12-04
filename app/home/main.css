@@ -64,19 +64,35 @@
 .curated-container {
     display: flex;
     width: 100%;
-}
-
-.curated-container>div{
-    width: 445px !important;
-    margin-bottom: 10px;
+    justify-content: space-between;
 }
 .curated-container>div:first-child{
     margin-right: 10px;
 }
+.curated-item {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+.curated-link {
+    width: 100% !important;
+    height: auto !important;
+}
+.curated-container>div {
+    border: solid 1px #eee;
+    width: 445px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.curated-content {
+    padding: 1.2em 1em 1em 1em;
+}
+
 
 /* 커뮤니티 - 인기글 */
 
-.hotpost, .curated-container>div{
+.hotpost{
     border: solid 1px #eee;
     border-radius: 10px;
     padding: 25px;
