@@ -4,6 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import LoginBtn from "./LoginBtn";
 import LogoutBtn from "./LogoutBtn";
+import Footer from "@/components/footer";
 
 export default async function RootLayout({ children }) {
 
@@ -38,7 +39,10 @@ export default async function RootLayout({ children }) {
               }
             </div>
         </div>
+        <div className="main-content">
         {children}
+        </div>
+        <Footer/>
       </body>
     </html>
   );

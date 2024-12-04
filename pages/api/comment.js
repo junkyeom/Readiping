@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     }
 
     await db.collection('comment').insertOne(body)
-    await db.collection('post').updateOne({parent : new ObjectId(data)}, {$inc : {commentCnt : 1}})
+    await db.collection('post').updateOne({_id : new ObjectId(data.id)}, {$inc : {commentCnt : 1}})
     return res.redirect(302, '/list')
     }
 

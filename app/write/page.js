@@ -30,7 +30,7 @@ export default function Write() {
             </select>
           </div>
           <div className='title-container'>
-            <h5>제목</h5>
+            <h5 className='title-title'>제목</h5>
             <input className='title-input' type='text' value={val} onChange={(e)=>{
               setVal(e.target.value)
             }} placeholder='제목을 입력해 주세요'></input>

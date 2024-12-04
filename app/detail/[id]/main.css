@@ -23,9 +23,11 @@ h5 {
     min-height: 100vh;
     font-size: 14px;
     display: flex;
+    overflow: visible;
 }
 .detail-main {
-    width: 70%;
+    flex: 1;
+    padding: 1em 1em;
 }
 #detail-type {
     font-size: 1.1em;
@@ -94,6 +96,7 @@ h5 {
     padding: 5px;
     white-space: pre-wrap;
     resize: vertical;
+    box-sizing: border-box;
 }
 
 /* like */
@@ -116,9 +119,14 @@ h5 {
 
 /* banner */
 
-.detail-banner {
+.detail-side {
     width: 300px;
-    height: 915px;
+    position: relative;
+}
+.detail-banner {
+    width: 200px;
+    height: 500px;
+    padding: 10px;
     position: sticky;
-    background-color: #ff3399;
+    top: 20px;
 }

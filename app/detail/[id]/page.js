@@ -38,8 +38,8 @@ export default async function Detail(props){
                     <div id='detail-tool'>
                         { session && session.user.id == result.author ? 
                         <div id='session-tool'>
-                            {/* <Link href={'/edit/' + result._id}><span className="tool-btn">수정</span></Link> */}
-                            <Delete id={result._id.toString()}/>
+                            <Link href={'/edit/' + props.params.id}><span className="tool-btn">수정</span></Link>
+                            <Delete id={props.params.id}/>
                         </div> : 
                         <div>
                             <Link href='/reading'><span className="tool-btn">목록</span></Link>
@@ -52,14 +52,14 @@ export default async function Detail(props){
             </div>
             <div className="detail-side">
                 <div className="detail-banner">
-                    <a href="https://blog.naver.com/hyuna5071/221380780586">
-                        {/* <Image
-                        src="/images/banner/home-1.png" 
-                        alt="description" 
-                        layout="intrinsic"
-                        style={{ borderRadius: '10px' }}
-                        /> */}
-                    </a>
+                <a href="https://www.youtube.com/watch?v=xgXeZeQiF1o">
+                    <Image
+                        src="/images/banner/detail-4.jpg"
+                        alt="Example image"
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </a>
                 </div>
             </div>
         </div>

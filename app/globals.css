@@ -14,13 +14,15 @@
 
 body {
     margin: 0 !important;
-    height: 100% !important;
+    min-height: 100vh !important;
     font-family: 'Pretendard-Regular',sans-serif !important;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 a {
     text-decoration: none !important;
-    color : black !important;
+    color: inherit !important;
 }
 p {
     margin: 0;
@@ -124,18 +126,6 @@ h6 {
     padding-top: 16px;
 }
 
-
-
-
-
-footer {
-    margin-top: auto; /* 푸터를 하단으로 밀어냄 */
-    background-color: #1c1c1c; /* 예시 배경 색 */
-    color: white;
-    text-align: center;
-    padding: 3.5rem 0;
-}
-
 /* sign */
 
 .sign-input {
@@ -166,6 +156,27 @@ footer {
     border: none;
     background: #757575;
     color: lightgray;
+}
+
+.main-content {
+    flex: 1;
+    padding-bottom: 2rem;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #282c34;
+    color: #9f9f9f ;
+    margin-top: 1rem;
+    padding: 3rem 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    margin: 0 2rem;
 }
 
 

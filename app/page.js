@@ -32,9 +32,6 @@ export default function Home() {
       </div>
       <div style={{height:'500px'}}></div>
     </div>
-    <footer>
-      Made by JPACMAFIA
-    </footer>
   </div>
   )
 }
