@@ -2,6 +2,7 @@ import "./globals.css";
 import Image from "next/image";
 import IndividualIntervalsExample from "./home/carousel";
 import HotPost from "./home/hotpost";
+import Curated from "./home/curated";
 
 export default function Home() {
 
@@ -12,6 +13,12 @@ export default function Home() {
       <IndividualIntervalsExample/>
     </div>
     <div id='inner-container'>
+      <div className="title-curated">
+        <span>CURATED</span>
+      </div>
+      <div id="curated-container">
+        <Curated/>
+      </div>
       <div className="title-community">
         <span>COMMUNITY</span>
       </div>

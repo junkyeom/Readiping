@@ -8,25 +8,22 @@ import { useRouter } from 'next/navigation';
 export default function Edit(props) {
 
   let router = useRouter()
-  let [val, setVal]  = useState('')
-  let [textVal, setTextVal] = useState('');
-  let [type, setType] = useState('')
+  let [type, setType] = useState('null')
+  let [titleVal, setTitleVal]  = useState('')
+  let [contentVal, setContentVal] = useState('');
+  let [defContentVal, setDefContentVal] = useState('')
+
 
   useEffect(()=>{
-    fetch(`/api/edit/${props.params.id}`)
+    fetch(`/api/edit/${props.params.id}`, {method : 'GET'})
     .then((r)=>r.json())
     .then((data)=>{
-      setVal(data.title || ''); // 제목 초기화
-      setTextVal(data.content || ''); // 본문 초기화
-      setType(data.type || 'null'); // 카테고리 초기화
+      setTitleVal(data.title); 
+      setDefContentVal(data.content); 
+      setType(data.type ); 
     });
   },[props.params.id])
 
-  // useEffect(()=>{
-  //   console.log(textVal)
-  // },[textVal])
-
-  let handleText = (a) => {setTextVal(a)}
  
     return (
       <div id='edit-page'>
@@ -40,23 +37,23 @@ export default function Edit(props) {
               <option value='null'>분류없음</option>
               <option value='일반'>일반</option>
               <option value='후기'>인증/후기</option>
-              <option value='후기'>창작</option>
+              <option value='창작'>창작</option>
               <option value='AD'>AD</option>
             </select>
-          </div>
+          </div> 
           <div className='title-container'>
-            <h5>제목</h5>
-            <input className='title-input' type='text' value={val} onChange={(e)=>{
-              setVal(e.target.value)
+            <h5 className='title-title'>제목</h5>
+            <input className='title-input' type='text' value={titleVal} onChange={(e)=>{
+              setTitleVal(e.target.value)
             }}></input>
           </div>
         </div>
-        <Editor sendText={handleText} defText={textVal}/>
+        <Editor setContentVal={setContentVal} defContentVal={defContentVal}/>
         <button className='write-btn' style={{marginLeft: '0'}} onClick={()=>{
           fetch('/api/edit/edit',{
             method : 'POST', 
             headers: { 'Content-Type': 'application/json' },
-            body : JSON.stringify({id : props.params.id ,title : val, content : textVal, type : type})})
+            body : JSON.stringify({id : props.params.id ,title : titleVal, content : contentVal, type : type})})
             .then((r)=>r.json())
             .then((r)=>{
               switch (r) {

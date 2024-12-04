@@ -54,28 +54,40 @@
     text-align: left;
 }
 
-.title-community {
-    text-align: center;
-    letter-spacing: 2px;
-    margin-top: 50px;
-}
-.title-community>span {
+/* 큐레이트 */
+
+.curated {
     position: relative;
-    display: inline-block;
-    padding-bottom: 1em;
+    overflow: hidden;
 }
 
-.hot-post {
+.curated-container {
+    display: flex;
+    width: 100%;
+}
+
+.curated-container>div{
+    width: 445px !important;
+    margin-bottom: 10px;
+}
+.curated-container>div:first-child{
+    margin-right: 10px;
+}
+
+/* 커뮤니티 - 인기글 */
+
+.hotpost, .curated-container>div{
     border: solid 1px #eee;
     border-radius: 10px;
     padding: 25px;
-    width: 400px;
-    box-sizing: border-box; /* 이거 용도가 뭘까 */
+    width: 350px;
+    box-sizing: border-box;
 }
 
 .hotpost-container {
     box-sizing: inherit;
 }
+
 .hotpost-title {
     margin: 5px 0 10px 0 !important;
     font-weight: bold !important;

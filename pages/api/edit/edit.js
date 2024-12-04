@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         }
         try{
             await db.collection('post').updateOne({_id : new ObjectId(req.body.id)},{$set : {title : req.body.title, content : req.body.content, type : req.body.type}})
-            res.redirect(302, '/reading')
+            return res.status(200).json('성공')
         } catch (error) {
             return res.status(500).json('에러남요')
         }

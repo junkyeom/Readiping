@@ -20,13 +20,13 @@ export default function HotPost() {
             console.log(hotpostVal)
         })
         .catch((error) => {
-            console.error("Error fetching hot posts:", error);
+            console.error("에러 발생 :", error);
             setIsLoading(false);
         });
     }, []);
 
     return (
-        <div className="hot-post">
+        <div className="hotpost">
             <div className="hotpost-container">
                 <h4 className="hotpost-title">🔥Hot Post</h4>
                 {isLoading ? (

@@ -4,7 +4,7 @@ export default function Footer() {
        <footer>
             <div className="footer-container">
                 <nav style={{color : '#ffffff'}}>
-                    <h4><a href="https://puppypawperson.tistory.com/">Tistory</a> | <a href="https://github.com/junkyeom">Github</a></h4>
+                    <h4><a href="https://puppypawperson.tistory.com/" target="blank">Tistory</a> | <a href="https://github.com/junkyeom" target="blank">Github</a></h4>
                 </nav><br/>
                 <p>
                     <span>Dev : JPACMAFIA</span><br/>

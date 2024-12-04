@@ -8,30 +8,22 @@ import dynamic from 'next/dynamic';
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false, loading: () => <p>로딩중...</p>});
 
 
-export default function Editor({sendText, defText}) {
-  // sendText는 함수, defText는 default 변수입니당!
-
-  // useEffect(()=>{
-
-  // })
+export default function Editor({setContentVal, defContentVal}) {
+  // setContentVal는 함수, defContentVal는 default 변수입니당!
 
   const [value, setValue] = useState('');
 
   useEffect(() => {
-    setValue(defText);
-  }, [defText]);
+    setValue(defContentVal);
+  }, [defContentVal]);
 
   const handleChange = (newValue) => {
       setValue(newValue);
   };
 
-  useEffect(() => {
-    setValue(defText);
-  }, [defText]);
-
   useEffect(()=>{
-    sendText(value)
-  },[value, sendText])
+    setContentVal(value)
+  },[value, setContentVal])
   
 
   return (

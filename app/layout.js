@@ -34,8 +34,8 @@ export default async function RootLayout({ children }) {
             <div className="nav-right">
               {
                 session ? 
-                <span><span className="accout-symbol material-symbols-outlined">account_circle</span> {session.user.name} <span style={{marginLeft : '10px'}}><LogoutBtn/></span></span>  
-                : <span><LoginBtn/><span style={{marginLeft : '10px'}}><Link href='/register'>회원가입</Link></span></span>
+                <span><span className="accout-symbol material-symbols-outlined">account_circle</span> {session.user.name} <span className="nav-right-menu" style={{marginLeft : '10px'}}><LogoutBtn/></span></span>  
+                : <span className="nav-right-menu"><LoginBtn/><span style={{marginLeft : '10px'}}><Link href='/register'>회원가입</Link></span></span>
               }
             </div>
         </div>
