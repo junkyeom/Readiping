@@ -88,6 +88,17 @@
 .curated-content {
     padding: 1.2em 1em 1em 1em;
 }
+.curated-title {
+    margin : '0';
+    color : #333;
+}
+.curated-title::before {
+    content: '주요 콘텐츠';
+    font-size: 0.6em;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
 
 
 /* 커뮤니티 - 인기글 */

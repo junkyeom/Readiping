@@ -128,7 +128,7 @@ h6 {
     letter-spacing: 2px;
     margin-top: 50px;
 }
-.title-community>span, .title-crated>span {
+.title-community>span, .title-curated>span {
     position: relative;
     display: inline-block;
     padding-bottom: 1em;
@@ -193,5 +193,3 @@ footer {
 .footer-container {
     margin: 0 2rem;
 }
-
-

@@ -9,7 +9,7 @@ export default function Curated() {
         <div className="curated">
             <div className="curated-container">
                 <div>
-                    <Link href='/detail/674ffba5ecc611c13b338b4d' className="curated-link">
+                    <Link href='/detail/67502fa1a6fe45b7d7858175' className="curated-link">
                         <div className="curated-item">
                             <Image 
                                 src="/images/curated-2.jpeg"
@@ -19,9 +19,9 @@ export default function Curated() {
                             />
                         </div>
                         <div className="curated-content">
-                            <p style={{margin : '0', color : '#333', fontWeight : '700'}}>
+                            <h4 className='curated-title'>
                                 BOUND X IGOR
-                            </p>
+                            </h4>
                         </div>
                     </Link>
                 </div>
@@ -36,9 +36,9 @@ export default function Curated() {
                             />
                         </div>
                         <div className="curated-content">
-                            <p style={{margin : '0', color : '#333', fontWeight : '700'}}>
+                            <h4 className='curated-title'>
                                 키에르케고르 &lt;죽음에 관하여&gt; 리뷰
-                            </p>
+                            </h4>
                         </div>
                     </Link>
                 </div>
