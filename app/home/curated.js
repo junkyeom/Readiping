@@ -20,7 +20,7 @@ export default function Curated() {
                         </div>
                         <div className="curated-content">
                             <h4 className='curated-title'>
-                                BOUND X IGOR
+                                독서하면서 듣기 좋은 노래 추천
                             </h4>
                         </div>
                     </Link>

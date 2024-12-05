@@ -27,7 +27,8 @@ h5 {
 }
 .detail-main {
     flex: 1;
-    padding: 1em 1em;
+    padding: 1em 0;
+    margin-right: 3em;
 }
 #detail-type {
     font-size: 1.1em;
