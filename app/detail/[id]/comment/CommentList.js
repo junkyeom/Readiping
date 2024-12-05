@@ -25,12 +25,15 @@ export default function CommentList({id, sessionId}) {
                   list.length > 0 ?
                   list.map((a, i)=>{
                       console.log(a)
-                      return (<div key={i} className="comment-item">
-                          <h5 className="comment-name">{a.name}</h5>
-                          <p className='comment-content'>{a.content}</p>
-                          {sessionId==a.author ? 
-                          <DelComment a={a}/> : null}
-                        </div>)
+                      return (
+                      <div key={i} className="comment-item">
+                        <h5 className="comment-name">{a.name}</h5>
+                        {/* <div style={{display : 'flex'}}> */}
+                            <p className='comment-content'>{a.content}</p>
+                            {sessionId==a.author ? 
+                            <div className='comment-del-btn'><DelComment a={a}/></div> : null}
+                        {/* </div> */}
+                      </div>)
                   }) : null
               }
           </div>
