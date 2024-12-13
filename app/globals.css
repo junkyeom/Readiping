@@ -109,6 +109,10 @@ h6 {
     color: #6b6b6b !important;
     font-weight: 600;
 }
+.nav-item:hover {
+    color: #ff3399 !important;
+    transition: all 0.25s;
+}
 
 /* homepage 설정 */
 

@@ -26,10 +26,10 @@ export default async function RootLayout({ children }) {
               <Link href='/' className="logo">READIPING</Link>
             </div>
             <div className="nav-center">
-              <Link href="/reading">독서포럼</Link>     
-              <Link href="/bookclub">북클럼</Link>
-              <Link href="/market">장터</Link>  
-              <Link href="/review">서평</Link>         
+              <Link href="/reading" className="nav-item">독서포럼</Link>     
+              <Link href="/bookclub" className="nav-item">북클럼</Link>
+              <Link href="/market" className="nav-item">장터</Link>  
+              <Link href="/review" className="nav-item">서평</Link>         
             </div>
             <div className="nav-right">
               {
@@ -47,4 +47,5 @@ export default async function RootLayout({ children }) {
     </html>
   );
 }
+
 
