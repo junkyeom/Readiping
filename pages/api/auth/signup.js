@@ -18,12 +18,10 @@ export default async function handler(req, res) {
         const regPassword = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
 
         if(!regId.test(req.body.id)) {
-            console.log('아이디 형식 아님')
             res.status(500).json('잘못된 아이디 형식입니다.')
         }
 
         if(!regPassword.test(req.body.password)) {
-            console.log('패스워드 형식 아님')
             res.status(500).json('잘못된 패스워드 형식입니다.')
         }
 

@@ -10,7 +10,6 @@ export default async function Reading() {
   let result = await db.collection('post').find().toArray()
   result.reverse()
   let session = await getServerSession(authOptions)
-  console.log(session)
 
     return (
       <div id='list-page'>

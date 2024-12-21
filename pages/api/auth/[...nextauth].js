@@ -24,12 +24,10 @@ export const authOptions = {
         let db = (await connectDB).db('reading');
         let user = await db.collection('user_cred').findOne({id : credentials.id})
         if (!user) {
-          console.log('존재하지 않는 이메일입니다.')
           return null
         }
         const pwcheck = await bcrypt.compare(credentials.password, user.password);
         if (!pwcheck) {
-          console.log('잘못된 패스워드입니다.');
           return null
         }
         return user
