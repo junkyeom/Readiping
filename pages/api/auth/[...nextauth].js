@@ -65,6 +65,9 @@ export const authOptions = {
       return session;
     },
   },
+  pages: {
+     signIn: "/signin"
+  },
 
   adapter: MongoDBAdapter(connectDB),
   secret: process.env.NEXTAUTH_SECRET
