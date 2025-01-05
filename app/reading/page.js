@@ -8,13 +8,12 @@ import { authOptions } from "@/pages/api/auth/[...nextauth]";
 export default async function Reading() {
   const db = (await connectDB).db('reading');
   let result = await db.collection('post').find().toArray()
-  result.reverse()
   let session = await getServerSession(authOptions)
 
     return (
       <div id='list-page'>
         <div className="table-bg">
-          <ReadingItem result={JSON.stringify(result)}></ReadingItem>
+          <ReadingItem result={JSON.stringify(result.reverse())}></ReadingItem>
         </div>
         { session ? <Link href='/write'><button className='write-btn'>작성</button></Link> : null}
       </div>

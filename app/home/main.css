@@ -103,27 +103,38 @@
 
 /* 커뮤니티 - 인기글 */
 
-.hotpost{
+.hotpost, .preading{
     border: solid 1px #eee;
     border-radius: 10px;
     padding: 25px;
-    width: 350px;
     box-sizing: border-box;
+}
+.preading {
+    width: 540px;
+}
+.hotpost {
+    width: 350px;
 }
 
 .hotpost-container {
     box-sizing: inherit;
 }
 
-.hotpost-title {
+.hotpost-title, .preading-title{
     margin: 5px 0 10px 0 !important;
     font-weight: bold !important;
 }
-.hotpost-item {
+.hotpost-item, .preading-item-title {
     margin: 0;
     padding: 5px 0;
     font-size: 13px;
 }
 .ranking {
     margin-right: 10px;
+}
+
+.preading-item-type{
+    text-align: center;
+    font-size: 13px;
+    padding-right: 10px;
 }

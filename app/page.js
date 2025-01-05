@@ -3,6 +3,7 @@ import Image from "next/image";
 import IndividualIntervalsExample from "./home/carousel";
 import HotPost from "./home/hotpost";
 import Curated from "./home/curated";
+import PreReading from "./home/prereading";
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
       </div>
       <div id="community-container">
         <HotPost/>
+        <PreReading/>
       </div>
       <div id='home-banner'>
         <a href="https://blog.naver.com/hyuna5071/221380780586">
@@ -37,7 +39,7 @@ export default function Home() {
         />
         </a>
       </div>
-      <div style={{height:'500px'}}></div>
+      <div style={{minHeight: '100px'}}></div>
     </div>
   </div>
   )

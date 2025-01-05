@@ -14,10 +14,8 @@ export default function HotPost() {
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
             setHotpostVal(data);
             setIsLoading(false);
-            console.log(hotpostVal)
         })
         .catch((error) => {
             console.error("에러 발생 :", error);

@@ -142,6 +142,12 @@ h6 {
     padding-top: 16px;
 }
 
+#community-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 /* sign */
 
 .sign-input {
@@ -196,4 +202,23 @@ footer {
 
 .footer-container {
     margin: 0 2rem;
+}
+
+
+/* 404 페이지 */
+
+.wait-page {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center;     /* 세로 가운데 정렬 */
+    height: 100vh; 
+}
+
+.wait-title {
+    font-family: 'PyeongChangPeace-Bold';
+    font-size: 3em;
+}
+.wait-sub {
+    margin-top: 10px;
+    text-align: center;
 }

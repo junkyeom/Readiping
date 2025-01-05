@@ -1,6 +1,6 @@
-export default function Market() {
+export default function Bookclub() {
     return (
-      <div className="wait-page">
+        <div className="wait-page">
         <div>
             <div className="wait-title">
                 개발중인 페이지 입니다
