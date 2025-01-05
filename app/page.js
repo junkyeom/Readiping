@@ -34,7 +34,6 @@ export default function Home() {
           alt="description" 
           width={900} 
           height={0}
-          layout="intrinsic"
           style={{ borderRadius: '10px' }}
         />
         </a>

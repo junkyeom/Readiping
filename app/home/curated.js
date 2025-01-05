@@ -15,7 +15,7 @@ export default function Curated() {
                                 src="/images/curated-2.jpeg"
                                 alt="Example image" 
                                 fill
-                                objectFit="cover"
+                                style={{ objectFit: 'cover' }}
                             />
                         </div>
                         <div className="curated-content">
@@ -32,7 +32,7 @@ export default function Curated() {
                                 src='/images/curated-1.jpg'
                                 alt="Example image" 
                                 fill
-                                objectFit="cover"
+                                style={{ objectFit: 'cover' }}
                             />
                         </div>
                         <div className="curated-content">

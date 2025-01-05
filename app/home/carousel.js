@@ -16,8 +16,8 @@ export default function IndividualIntervalsExample() {
                         <Image
                             src="/images/c-1.jpg"
                             alt="book"
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            style={{ objectFit: 'cover' }}
                         />
                     </div>
                     <Carousel.Caption>
@@ -32,8 +32,8 @@ export default function IndividualIntervalsExample() {
                 <Image
                     src="/images/c-2.png"
                     alt="wings"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                 />
             </div>
             <Carousel.Caption>
@@ -48,8 +48,8 @@ export default function IndividualIntervalsExample() {
                 <Image
                     src="/images/c-3.jpg"
                     alt="Kangmincheol"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                 />
             </div>
             <Carousel.Caption>
