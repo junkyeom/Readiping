@@ -2,6 +2,7 @@
 
 <p>⌚ 개발 기간 : 2024.10 - 2025.01</p>
 <p>🌐 서비스 배포 주소 : https://readiping.vercel.app</p>
+<br>
 
 
 ## 기술 스택
