@@ -12,5 +12,5 @@
 
 <h3>Deployment</h3>
 <p>
-  <img src="<img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
+  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
 </p>
