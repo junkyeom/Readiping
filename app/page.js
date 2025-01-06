@@ -32,8 +32,8 @@ export default function Home() {
         <Image
           src="/images/banner/home-1.png" 
           alt="description" 
-          width={900} 
-          height={0}
+          width={900}
+          height={120}
           style={{ borderRadius: '10px' }}
         />
         </a>
