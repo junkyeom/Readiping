@@ -1,7 +1,8 @@
 # READIPING - 애서가들의 독서 커뮤니티
 
-⌚ 개발 기간 : 2024.10 - 2025.01
-🌐 서비스 배포 주소 : https://readiping.vercel.app/
+<p>⌚ 개발 기간 : 2024.10 - 2025.01</p>
+<p>🌐 서비스 배포 주소 : https://readiping.vercel.app</p>
+
 
 ## 기술 스택
 
