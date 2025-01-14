@@ -9,10 +9,10 @@ import Footer from "@/components/footer";
 export const metadata = {
   title: 'READPING',
   description: '애서가들의 독서 커뮤니티, READIPING',
-  icon: '/favicon.ico',
+  icons: {
+    icon: '/favicon.ico'
+  }
 }
-
-export const viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
 
 export default async function RootLayout({ children }) {
 
