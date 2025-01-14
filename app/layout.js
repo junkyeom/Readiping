@@ -6,20 +6,20 @@ import LoginBtn from "./LoginBtn";
 import LogoutBtn from "./LogoutBtn";
 import Footer from "@/components/footer";
 
+export const metadata = {
+  title: 'READPING',
+  description: '애서가들의 독서 커뮤니티, READIPING',
+  icon: '/favicon.ico',
+}
+
+export const viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+
 export default async function RootLayout({ children }) {
 
   let session = await getServerSession(authOptions)
 
   return (
     <html lang="en">
-      <head>
-        <title>READPING</title>
-        <meta name='description' content='독서 커뮤니티'/>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
-      </head>
       <body>
         <div className="nvb">
             <div className="nav-left">
