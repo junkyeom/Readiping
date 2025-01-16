@@ -56,7 +56,9 @@ export default async function Detail(props){
                     <Image
                         src="/images/banner/detail-4.jpg"
                         alt="Example image"
-                        layout="fill"
+                        width={2}
+                        height={5}
+                        layout="responsive"
                         objectFit="cover"
                     />
                 </a>

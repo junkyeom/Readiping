@@ -29,14 +29,14 @@ export default function Home() {
       </div>
       <div id='home-banner'>
         <a href="https://blog.naver.com/hyuna5071/221380780586">
-        <Image
+        {/* <Image
           src="/images/banner/home-1.png" 
           alt="description"
           layout="responsive"
           width={1020}
           height={136}
           style={{ borderRadius: '10px' }}
-        />
+        /> */}
         </a>
       </div>
       <div style={{minHeight: '100px'}}></div>
