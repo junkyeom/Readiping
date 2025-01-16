@@ -28,15 +28,16 @@ export default function Home() {
         <PreReading/>
       </div>
       <div id='home-banner'>
-        <a href="https://blog.naver.com/hyuna5071/221380780586">
-        {/* <Image
-          src="/images/banner/home-1.png" 
-          alt="description"
-          layout="responsive"
-          width={1020}
-          height={136}
-          style={{ borderRadius: '10px' }}
-        /> */}
+        <a href="https://blog.naver.com/hyuna5071/221380780586" className="home-banner-container">
+        <div style={{position:"relative", width:"100px", height:"15px", justifyContent:"center"}}>
+          <Image
+            src="/images/banner/home-1.png" 
+            alt="description"
+            width={1000}
+            height={130}
+            style={{ borderRadius: '10px' }}
+          />
+        </div>
         </a>
       </div>
       <div style={{minHeight: '100px'}}></div>

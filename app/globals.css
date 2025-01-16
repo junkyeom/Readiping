@@ -168,7 +168,6 @@ h6 {
 
 #home-banner {
     display: flex;
-    justify-content: center;
     margin-top: 60px;
 }
 
@@ -185,7 +184,7 @@ h6 {
 
 .main-content {
     flex: 1;
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
 }
 
 
