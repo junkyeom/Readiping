@@ -21,7 +21,7 @@ h5 {
     padding-left: 50px;
     margin: 20px;
     min-height: 100vh;
-    font-size: 14px;
+    font-size: 1em;
     display: flex;
     overflow: visible;
 }

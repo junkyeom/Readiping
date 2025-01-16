@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react"
+import './main.css'
 
 export default function Like({id, like}) {
 
@@ -14,7 +15,7 @@ export default function Like({id, like}) {
             }}
             }
             >
-            <span className="material-symbols-outlined" style={{marginRight : '1px'}}>Favorite</span><span>{like}</span>
+            <span className="material-symbols-outlined" style={{marginRight : '1px'}}>favorite</span><span>{like}</span>
         </button>
     )
 }
