@@ -7,7 +7,7 @@ export default function Curated() {
 
     return (
         <div className="curated">
-            <div className="curated-container">
+            <div className="curated-box">
                 <div>
                     <Link href='/detail/67502fa1a6fe45b7d7858175' className="curated-link">
                         <div className="curated-item">

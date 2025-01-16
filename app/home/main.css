@@ -56,18 +56,19 @@
 
 /* 큐레이트 */
 
+
 .curated {
     position: relative;
     overflow: hidden;
 }
 
-.curated-container {
+.curated-box {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
 }
-.curated-container>div:first-child{
-    margin-right: 20px;
+.curated-box>div:first-child{
+    margin-right: 2%;
 }
 .curated-item {
     box-sizing: border-box;
@@ -79,9 +80,9 @@
     width: 100% !important;
     height: auto !important;
 }
-.curated-container>div {
+.curated-box>div {
     border: solid 1px #eee;
-    width: 50%;
+    width: 40%;
     border-radius: 10px;
     box-sizing: border-box;
 }
@@ -110,10 +111,11 @@
     box-sizing: border-box;
 }
 .preading {
-    width: 56%;
+    width: 40%;
 }
 .hotpost {
-    width: 42%;
+    width: 40%;
+    margin-right: 2%;
 }
 
 .hotpost-container {

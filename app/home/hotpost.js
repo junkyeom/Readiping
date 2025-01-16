@@ -31,7 +31,7 @@ export default function HotPost() {
                     <p>로딩 중...</p>
                 ) : hotpostVal.length > 0 ? (
                     <div className="hotpost-list">
-                        {hotpostVal.map((a, i) => (
+                        {hotpostVal.map((a, i)=>(
                             <Link href={'/detail/'+a._id}><div className="hotpost-item" key={i}><span className="ranking">{i+1}</span><span>{a.title}<em>[{a.commentCnt}]</em></span></div></Link>
                         ))}
                     </div>
