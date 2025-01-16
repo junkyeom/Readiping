@@ -32,7 +32,6 @@ export default function Home() {
         <Image
           src="/images/banner/home-1.png" 
           alt="description" 
-          layout="responsive"
           width={1020}
           height={136}
           style={{ borderRadius: '10px' }}
