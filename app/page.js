@@ -31,7 +31,8 @@ export default function Home() {
         <a href="https://blog.naver.com/hyuna5071/221380780586">
         <Image
           src="/images/banner/home-1.png" 
-          alt="description" 
+          alt="description"
+          layout="responsive"
           width={1020}
           height={136}
           style={{ borderRadius: '10px' }}
