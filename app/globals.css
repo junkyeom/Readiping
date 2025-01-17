@@ -43,27 +43,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 32px !important; /* h1의 기본 크기 */
+    font-size: 2.5em !important; /* h1의 기본 크기 */
 }
 
 h2 {
-    font-size: 24px !important; /* h2의 기본 크기 */
+    font-size: 2em !important; /* h2의 기본 크기 */
 }
 
 h3 {
-    font-size: 19px !important; /* h3의 기본 크기 */
+    font-size: 1.75em !important; /* h3의 기본 크기 */
 }
 
 h4 {
-    font-size: 16px!important; /* h4의 기본 크기 */
+    font-size: 1.5em !important; /* h4의 기본 크기 */
 }
 
 h5 {
-    font-size: 12px !important; /* h5의 기본 크기 */
+    font-size: 1.25em !important; /* h5의 기본 크기 */
 }
 
 h6 {
-    font-size: 10px!important; /* h6의 기본 크기 */
+    font-size: 1em !important; /* h6의 기본 크기 */
 }
 
 .material-symbols-outlined {

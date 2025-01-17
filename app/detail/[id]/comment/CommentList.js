@@ -18,7 +18,7 @@ export default function CommentList({id, sessionId}) {
     return (
         <div>
             <div className="comment-header">
-                <h4 style={{margin:'0'}}><span class="material-symbols-outlined">chat</span>댓글 <span style={{color : '#ff7f7f'}}>{list.length}</span></h4>
+                <h5 style={{margin:'0'}}><span class="material-symbols-outlined">chat</span>댓글 <span style={{color : '#ff7f7f'}}>{list.length}</span></h5>
             </div>
             <div className="comment-list">
               {
@@ -37,7 +37,7 @@ export default function CommentList({id, sessionId}) {
                   }) : null
               }
           </div>
-          <h5 style={{fontSize : '1em', margin : '1em 0'}}>댓글 달기</h5>
+          <h6 style={{fontSize : '1em', margin : '1em 0'}}>댓글 달기</h6>
           <textarea className='comment-input' wrap="soft" onChange={(e)=>{ setComment(e.target.value)}}/>
           <button onClick={()=>{
             fetch('/api/comment/comment', {method : 'POST', headers: {'Content-Type': 'application/json'}, body : JSON.stringify({'comment' : comment, 'id' : id})});
