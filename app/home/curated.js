@@ -19,9 +19,9 @@ export default function Curated() {
                             />
                         </div>
                         <div className="curated-content">
-                            <h4 className='curated-title'>
+                            <h5 className='curated-title'>
                                 독서하면서 듣기 좋은 노래 추천
-                            </h4>
+                            </h5>
                         </div>
                     </Link>
                 </div>
@@ -36,9 +36,9 @@ export default function Curated() {
                             />
                         </div>
                         <div className="curated-content">
-                            <h4 className='curated-title'>
+                            <h5 className='curated-title'>
                                 키에르케고르 &lt;죽음에 관하여&gt; 리뷰
-                            </h4>
+                            </h5>
                         </div>
                     </Link>
                 </div>

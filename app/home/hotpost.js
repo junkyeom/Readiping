@@ -26,7 +26,7 @@ export default function HotPost() {
     return (
         <div className="hotpost">
             <div className="hotpost-container">
-                <h4 className="hotpost-title">🔥Hot Post</h4>
+                <h5 className="hotpost-title">🔥Hot Post</h5>
                 {isLoading ? (
                     <p>로딩 중...</p>
                 ) : hotpostVal.length > 0 ? (

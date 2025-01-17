@@ -9,7 +9,7 @@ export default async function PreReading() {
     return (
         <div className="preading">
             <div className="preading-container">
-                <h4 className="preading-title">📚 독서포럼</h4>
+                <h5 className="preading-title">📚 독서포럼</h5>
                 <div>
                     <PreReadingItem result={JSON.stringify(result.reverse())}/>
                 </div>
