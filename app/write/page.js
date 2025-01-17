@@ -14,10 +14,10 @@ export default function Write() {
 
     return (
       <div id='write-page'>
-        <h4>글 작성</h4>
+        <h5>글 작성</h5>
         <div className='write-header'>
           <div className='ctg-container'>
-            <h5 className='ctg-title'>카테고리</h5>
+            <h6 className='ctg-title'>카테고리</h6>
             <select id='category' onChange={(e)=>{
               setType(e.target.value)
               console.log(e.target.value)
@@ -30,7 +30,7 @@ export default function Write() {
             </select>
           </div>
           <div className='title-container'>
-            <h5 className='title-title'>제목</h5>
+            <h6 className='title-title'>제목</h6>
             <input className='title-input' type='text' value={val} onChange={(e)=>{
               setVal(e.target.value)
             }} placeholder='제목을 입력해 주세요'></input>
