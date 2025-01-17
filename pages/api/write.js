@@ -23,7 +23,7 @@ export default async function handler(req, res) {
                         return res.status(500).json('본문빔')
                 }
                 try{
-                        let time = new Date().toLocaleDateString()
+                        let time = new Date().toLocaleDateString('ko-KR')
                         data.time = time;
                         data.like = 0;
                         data.commentCnt = 0;
