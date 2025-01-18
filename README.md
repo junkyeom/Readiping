@@ -1,10 +1,10 @@
 # READIPING - 애서가들의 독서 커뮤니티
 
 <p>
-💡 프로젝트 설명 : 독서 및 창작 활동 중심의 커뮤니티 플랫폼.<br>
-⌚ 개발 기간 : 2024.10 - 2025.01<br>
-🌐 서비스 배포 주소 : https://readiping.vercel.app<br>
-⏲️ 기간 : 2024.10 - 2025.01
+💡 <strong>프로젝트 설명</strong> : 독서 및 창작 활동 중심의 커뮤니티 플랫폼.<br>
+⌚ <strong>개발 기간</strong> : 2024.10 - 2025.01<br>
+🌐 <strong>서비스 배포 주소</strong> : https://readiping.vercel.app<br>
+⏲️ <strong>기간</strong> : 2024.10 - 2025.01
 </p>
 
 
