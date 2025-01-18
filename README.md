@@ -1,9 +1,11 @@
 # READIPING - 애서가들의 독서 커뮤니티
 
 <p>💡 독서 및 창작 활동 중심의 커뮤니티 플랫폼.</p>
-<p>⌚ 2024.10 - 2025.01</p>
-<p>🌐 https://readiping.vercel.app</p>
-<p>⏲️ 2024.10 - 2025.01</p>
+<p>
+홈페이지: https://readiping.vercel.app<br>
+개발기간: 2024.10 - 2025.01<br>
+</p>
+
 
 
 
