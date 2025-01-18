@@ -12,9 +12,22 @@
 ## 기술 스택
 
 <p>
-  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
-  <img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
-  <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white">
-  <img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens">
-  <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white">
+
+**NextJS 14 - App Router**
+SEO(검색 엔진 최적화)를 개선하고, 메타 데이터 생성이 간편하며 SSR을 통해 초기 랜더링 속도를 향상시켜 줄 수 있는 NextJS를 사용했습니다.
+
+**React-Bootstrap**
+React-Bootstrp을 사용하여 캐러셀 UI를 빠르고 효율적으로 구현 했습니다.
+
+**React-Quill**
+손쉬운 텍스트 에디터인 React-Quill로 UX를 개선했습니다.
+
+**NextAuth (Auth.js)**
+NextAuth를 사용하여 구글, 깃허브 등의 소셜 플랫폼과 로그인 방식을 연동했습니다.
+
+**MongoDB**
+NoSql 데이터 베이스인 MongoDB를 사용하여 변화가 잦은 데이터를 유연하게 처리할 수 있게 했습니다.
+
+**Vercel**
+Next와 호환성이 높은 Vercel을 사용해서 간편하고 효율적으로 프로젝트를 배포했습니다.
 </p>
