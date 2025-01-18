@@ -2,8 +2,8 @@
 
 <p>💡 독서 및 창작 활동 중심의 커뮤니티 플랫폼.</p>
 <p>
-**홈페이지** : https://readiping.vercel.app<br>
-**개발기간** : 2024.10 - 2025.01<br>
+홈페이지 : https://readiping.vercel.app<br>
+개발기간 : 2024.10 - 2025.01<br>
 </p>
 
 
